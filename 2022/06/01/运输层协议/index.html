@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Hello World, Hexo">
+    <meta name="keywords" content="运输层协议, Hexo">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Hello World | Hexo</title>
+    <title>运输层协议 | Hexo</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -391,12 +391,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/6.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Hello World</h1>
+                    <h1 class="description center-align post-title">运输层协议</h1>
                 </div>
             </div>
         </div>
@@ -524,7 +524,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-05-31
+                    2022-06-01
                 </div>
                 
 
@@ -545,19 +545,46 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+                <p>运输层协议</p>
+<h1 id="综述"><a href="#综述" class="headerlink" title="综述"></a>综述</h1><p>运输层协议服务：</p>
+<p>可靠数据传输：保证报文不丢失，TCP提供</p>
+<p>吞吐量：交付bit的速率，越大越好 第七章</p>
+<p>定时:保证较低的时延 第七章</p>
+<p>安全性：发送接收数据加密，数据完整性和端点鉴别，使用TCP+SSL实现，第八章</p>
+<h2 id="一图看懂TCP和UDP区别"><a href="#一图看懂TCP和UDP区别" class="headerlink" title="一图看懂TCP和UDP区别"></a>一图看懂TCP和UDP区别</h2><p><img src="https://j5ijmcehlj.feishu.cn/space/api/box/stream/download/asynccode/?code=MWQwY2M0MGI5ZDFkM2UxNTYxNzM5NTg5YmQyNjBhMTJfbU81YUp5TklLbmpwSG1RUkJwYW9oRFlPeGo0amg2emNfVG9rZW46Ym94Y25QY2hxT1lsV1BvTk1ubGhETWhCc3FmXzE2NTQwNzE3NDY6MTY1NDA3NTM0Nl9WNA" alt="img"></p>
+<h1 id="TCP"><a href="#TCP" class="headerlink" title="TCP"></a>TCP</h1><p>面向连接服务</p>
+<p>可靠数据传输服务：正确，按序</p>
+<h2 id="三次握手→建立连接"><a href="#三次握手→建立连接" class="headerlink" title="三次握手→建立连接"></a>三次握手→建立连接</h2><p>1、C，我想要建立连接</p>
+<p>2、收到，我是S，已确认你的身份（C），可以建立连接</p>
+<p>3、好的，已收到你的回信，确认你是S，开始通信</p>
+<p>A对B说：我是A  （发起通信）</p>
+<p>B对A说：我是B，我收到你发送的通信邀请  （让A确认接收者的确是B）</p>
+<p>A对B说：收到，我知道你是B，开始通信 （让B知道，A收到了来自B的回信，确认B的身份，开始通信）</p>
+<p>一个RTT等于前两次握手的时间，第三次握手客户机将确认信息和</p>
+<p>http请求报文结合起来发送到到该tcp连接</p>
+<p>一个接口的响应时间=两个RTT+服务器传输HTML的时间。一个RTT用于建立TCP，另一个RTT用于请求和接收一个对象</p>
+<h2 id="四次挥手→断开连接"><a href="#四次挥手→断开连接" class="headerlink" title="四次挥手→断开连接"></a>四次挥手→断开连接</h2><p>无差错，适当顺序。保证没有字节的丢失和冗余</p>
+<p>客户端对服务端：我想要断开连接</p>
+<p>服务端对客户端：收到信息，但得等我数据返回完</p>
+<p>服务端对客户端：数据已返回完，可以关闭连接</p>
+<p>客户端对服务端：收到信息，请关闭连接</p>
+<h2 id="TCP首部字段及含义"><a href="#TCP首部字段及含义" class="headerlink" title="TCP首部字段及含义"></a>TCP首部字段及含义</h2><h2 id="TCP流量控制-滑动窗口（与拥塞控制两个概念）"><a href="#TCP流量控制-滑动窗口（与拥塞控制两个概念）" class="headerlink" title="TCP流量控制/滑动窗口（与拥塞控制两个概念）"></a>TCP流量控制/滑动窗口（与拥塞控制两个概念）</h2><p>cwnd（congestion window）</p>
+<p>发送方维护一个接收窗口的变量来提供流量控制。功能是告诉发送方，接收方还有多少缓存空间。</p>
+<p>已发送-已接收&lt;=接收窗口</p>
+<p>当网络拥塞时，滑动窗口变小，网络畅通时，滑动窗口变大</p>
+<h2 id="TCP拥塞控制（Reno算法）"><a href="#TCP拥塞控制（Reno算法）" class="headerlink" title="TCP拥塞控制（Reno算法）"></a>TCP拥塞控制（Reno算法）</h2><p>调节网络流量速率，拥塞时限制TCP发送方</p>
+<p>1、加性增、乘性减</p>
+<p>2、慢启动</p>
+<p>3、对超时事件作出反应</p>
+<p><img src="https://j5ijmcehlj.feishu.cn/space/api/box/stream/download/asynccode/?code=YmI4Y2U4NTNkOTdhNzI5Zjg2MzM4ZWJmOTBiMjI2OThfejdUUU53TlpCc1JOQkc4ZVd0cEpGa1dNYTRqZ3d6aVRfVG9rZW46Ym94Y25QY3RGRHlqeFAyQklDTVdnWTNtS1VlXzE2NTQwNzE3NDY6MTY1NDA3NTM0Nl9WNA" alt="img"></p>
+<h3 id="慢启动"><a href="#慢启动" class="headerlink" title="慢启动"></a>慢启动</h3><p>慢启动阶段思路是不要一开始就发送大量的数据，先探测一下网络的拥塞程度，也就是说由小到大逐渐增加拥塞窗口的大小，在没有出现丢包时每收到一个 ACK 就将拥塞窗口大小加一（单位是 MSS，最大单个报文段长度），每轮次发送窗口增加一倍，呈指数增长，若出现丢包，则将拥塞窗口减半，进入拥塞避免阶段</p>
+<h3 id="拥塞避免"><a href="#拥塞避免" class="headerlink" title="拥塞避免"></a>拥塞避免</h3><p>当窗口达到慢启动阈值或出现丢包时，进入拥塞避免阶段，窗口每轮次加一，呈线性增长；当收到对一个报文的三个重复的 ACK 时，认为这个报文的下一个报文丢失了，进入快重传阶段</p>
+<h3 id="快重传"><a href="#快重传" class="headerlink" title="快重传"></a>快重传</h3><p>要求接收方在收到一个失序的报文段后就立即发出重复确认（为的是使发送方及早知道有报文段没有到达对方，可提高网络吞吐量约20%）而不要等到自己发送数据时捎带确认；</p>
+<h3 id="快恢复"><a href="#快恢复" class="headerlink" title="快恢复"></a>快恢复</h3><p>快重传完成后进入快恢复阶段，将慢启动阈值修改为当前拥塞窗口值的一半，同时拥塞窗口值等于慢启动阈值，然后进入拥塞避免阶段，重复上述过程。</p>
+<h1 id="UDP"><a href="#UDP" class="headerlink" title="UDP"></a>UDP</h1><p>UDP：不可靠的，无连接（没有握手）的服务，无连接状态，开销小容忍丢失，多媒体音/视频+因特网电话电话</p>
+<p>无连接，不可靠，可能乱序</p>
+<h2 id="UDP报文段结构"><a href="#UDP报文段结构" class="headerlink" title="UDP报文段结构"></a>UDP报文段结构</h2><p>首部：源端口号，目的端口号，长度，校验和。每个字段两字节。</p>
+<p>校验和提供差错检测功能：</p>
 
                 
             </div>
@@ -584,7 +611,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://chunxia-zzz.github.io/2022/05/31/hello-world/">https://chunxia-zzz.github.io/2022/05/31/hello-world/</a>
+                    <a href="https://chunxia-zzz.github.io/2022/06/01/%E8%BF%90%E8%BE%93%E5%B1%82%E5%8D%8F%E8%AE%AE/">https://chunxia-zzz.github.io/2022/06/01/%E8%BF%90%E8%BE%93%E5%B1%82%E5%8D%8F%E8%AE%AE/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -789,54 +816,18 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2022/06/01/%E5%BA%94%E7%94%A8%E5%B1%82%E5%8D%8F%E8%AE%AE/">
+                <a href="/2022/06/01/%E8%BF%90%E8%BE%93%E5%B1%82%E5%8D%8F%E8%AE%AE/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="应用层协议">
+                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="运输层协议">
                         
-                        <span class="card-title">应用层协议</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-                        
-                    </div>
-                    <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-06-01
-                        </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-user fa-fw"></i>
-                            Chun xia
-                            
-                        </span>
-                    </div>
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
-            </div>
-            <div class="card">
-                <a href="/2022/05/31/hello-world/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Hello World">
-                        
-                        <span class="card-title">Hello World</span>
+                        <span class="card-title">运输层协议</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -847,7 +838,7 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-05-31
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-06-01
                             </span>
                         <span class="publish-author">
                             
@@ -858,6 +849,43 @@
                     </div>
                 </div>
 
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2022/06/01/%E5%85%B3%E4%BA%8E%E6%88%91/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="关于我">
+                        
+                        <span class="card-title">关于我</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-06-01
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            Chun xia
+                            
+                        </span>
+                    </div>
+                </div>
                 
             </div>
         </div>

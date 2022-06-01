@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Hello World, Hexo">
+    <meta name="keywords" content="应用层协议, Hexo">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Hello World | Hexo</title>
+    <title>应用层协议 | Hexo</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -391,12 +391,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/13.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Hello World</h1>
+                    <h1 class="description center-align post-title">应用层协议</h1>
                 </div>
             </div>
         </div>
@@ -524,7 +524,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-05-31
+                    2022-06-01
                 </div>
                 
 
@@ -545,19 +545,100 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+                <p>应用层协议</p>
+<ul>
+<li>跨域产生的原因？如何解决？</li>
+</ul>
+<ul>
+<li>谈下你对 <code>**HTTP**</code> 长连接和短连接的理解？分别应用于哪些场景？</li>
+</ul>
+<h1 id="HTTP协议-Web应用"><a href="#HTTP协议-Web应用" class="headerlink" title="HTTP协议-Web应用"></a>HTTP协议-Web应用</h1><h2 id="协议版本1-0-1-1-2-0"><a href="#协议版本1-0-1-1-2-0" class="headerlink" title="协议版本1.0/1.1/2.0"></a>协议版本1.0/1.1/2.0</h2><p>http1.0，短连接/连接无法复用，连接无法复用会导致每次请求都经历三次握手和慢启动。三次握手在高延迟的场景下影响较明显，慢启动则对文件类大请求影响较大。</p>
+<p>http1.1<strong>（当前广泛使用）</strong>，支持持久连接，支持并行请求（不等待上一个请求完成）</p>
+<p>http2.0，多路复用，二进制分帧</p>
+<h2 id="报文格式"><a href="#报文格式" class="headerlink" title="报文格式"></a>报文格式</h2><p>请求报文</p>
+<p><img src="https://j5ijmcehlj.feishu.cn/space/api/box/stream/download/asynccode/?code=ZTI3YWYxOTM4YmE4ZTZjNjFhZTVjMzU0M2ZjZDVmZjlfVnF0TVlYcGthQXZCTUdHMTZld1BEV0F4blFlTk95Wk9fVG9rZW46Ym94Y25JUWVDT05hSlpQTmFZQzJIRG5OeG9nXzE2NTQwNzE2NTE6MTY1NDA3NTI1MV9WNA" alt="img"></p>
+<p>第一行为请求行：方法字段，URL字段和HTTP协议版本字段</p>
+<p>后面为首部行（请求头）：</p>
+<p>Host:<a target="_blank" rel="noopener" href="http://www.someschool.edu,主机/%E5%9F%9F%E5%90%8D">www.someschool.edu，主机/域名</a></p>
+<p>connection:close,不要使用持久连接</p>
+<p>user-agent:Mozilla/4.0,浏览器类型（netscape浏览器）</p>
+<p>accept-language:fr,用户想得到法语（french）版本的响应</p>
+<p><img src="https://j5ijmcehlj.feishu.cn/space/api/box/stream/download/asynccode/?code=NTBmYTU2YzY0YjE5N2MzYWY3ZWI3N2Y5MTNiODg5MjlfN21hWXlPZHRRb1B4M3AyY1BJdUk0b05NTEl2QzNQWVhfVG9rZW46Ym94Y25IUjBjSGZIc0hSZ0tnczJzNENSak9oXzE2NTQwNzE2NTE6MTY1NDA3NTI1MV9WNA" alt="img"></p>
+<p>响应报文</p>
+<p><img src="https://j5ijmcehlj.feishu.cn/space/api/box/stream/download/asynccode/?code=MjdhYTRkZTNjNzVjZjY0YmY0N2I1OTRjMTEwZjAwYWJfTTFKZ1VPWUxUZThtMm40SmdOS1BUYlVod3RUV2pJTnpfVG9rZW46Ym94Y24zeE92VnVLMGdYNnptWXhwSmw1MlpjXzE2NTQwNzE2NTE6MTY1NDA3NTI1MV9WNA" alt="img"></p>
+<p>初始状态行：</p>
+<p>HTTP/1.1 200 OK</p>
+<p>首部行（响应头）：</p>
+<p>Connection:close</p>
+<p>Date:Thu,03 Jul 2003 12:00:15 GMT</p>
+<p>Server:Apache/1.3.0(Unix)</p>
+<p>Last-Modified:Sun, 6 May 2007 09:23:24 GMT 对象最后修改的日期和时间</p>
+<p>Content-Length:6821 被发送对象的字节数</p>
+<p>Content-Type:text/html 发送的是HTML文本</p>
+<p>报文主体（具体的返回数据）：</p>
+<p>(data data data…)</p>
+<p><img src="https://j5ijmcehlj.feishu.cn/space/api/box/stream/download/asynccode/?code=MWU3MWIxZjEzZjE1NGZjZmZiMTcyYmVlNmUzMWRmMjRfcXZRVWd4SFNGZlRtbUdxYlVLUW9MbnJhdm9NajNqdnVfVG9rZW46Ym94Y24zMGo0NlFrMkFkR0RxWWg0QmlWMGVoXzE2NTQwNzE2NTE6MTY1NDA3NTI1MV9WNA" alt="img"></p>
+<h2 id=""><a href="#" class="headerlink" title=""></a></h2><h2 id="cookie"><a href="#cookie" class="headerlink" title="cookie"></a>cookie</h2><p><img src="https://j5ijmcehlj.feishu.cn/space/api/box/stream/download/asynccode/?code=NmQ0MDliODc4NTE1YjgzOTg2ZTQzZDE2MGE2MmQyODdfQzlUM1FsQnFMeFlQWWVockpDem1HWGdhZW9oNmhHSHdfVG9rZW46Ym94Y25sV1RZakpqektnMVlEdU5TaVZYVDlkXzE2NTQwNzE2NTE6MTY1NDA3NTI1MV9WNA" alt="img"></p>
+<p>http，无状态协议</p>
+<p>相同的TCP连接发送请求→持久连接（默认）</p>
+<p>每个请求/响应对经一个单独的TCP连接发送→非持久连接</p>
+<p>设计要点，以及他发挥什么作用：</p>
+<p>(1) cookie是以小的文本文件形式（即纯文本），完全存在于用户本地客户端；cookie保存了<strong>登录的凭证</strong>，有了它，只需要在下次请求时带着cookie发送，就不必再重新输入用户名、密码等重新登录了。</p>
+<p>(2) 是设计用来在<strong>服务端</strong>和<strong>客户端</strong>进行<strong>信息传递</strong>的；</p>
+<p>信息如何进行传递</p>
+<p>1、响应报文中有cookie首部行</p>
+<p>2、请求报文中有cookie首部行</p>
+<p>3、用户端系统中保存一个cookie文件，浏览器管理</p>
+<p>4、有一个后端数据库</p>
+<p>生效过程：</p>
+<p>1、首次访问，服务端产生一个唯一识别码（session_id），数据库添加一个表项</p>
+<p>2、服务端返回响应并携带set-cookie首部行，即返回session_id</p>
+<p>like:Set-cookie:1678</p>
+<p>3、浏览器存储这个cookie键值对</p>
+<p>4、浏览器再次访问服务端时，请求首部行中携带cookie：1678</p>
+<p>5、服务端知道了，这是susan</p>
+<h3 id="session"><a href="#session" class="headerlink" title="session"></a>session</h3><p>服务端维护用户会话，称之为一个session。</p>
+<p>session的生命周期：</p>
+<p>1、只要用户继续访问，服务器就会更新session的最后访问时间，并且维护这个session。</p>
+<p>2、session占用内存，为了防止内存溢出，服务器会把长时间没有活跃的Session删除。这个时间就是session的超时时间。</p>
+<h2 id="缓存"><a href="#缓存" class="headerlink" title="缓存"></a>缓存</h2><p>web缓存（web cache）</p>
+<p>也叫代理服务器，存放缓存。可以将用户浏览器的请求首先定向到web缓存器</p>
+<p>保持缓存数据是实时和真实数据库数据同步的：条件get</p>
+<p>缓存运作方式：</p>
+<p>1、客户端首次发送请求，缓存服务向真实服务请求。真实服务返回数据，缓存服务保存数据，并将数据发送给客户端</p>
+<p>2、客户端再次发送请求，缓存服务器向真实服务器请求，并携带条件get</p>
+<p>like：If-modified-since:wed, 4 Jul 2007 09:23:24</p>
+<p>3、真实服务器比对条件get与服务器最后修改时间是否吻合</p>
+<p>​    4.1吻合，说明数据未变动。服务器返回给缓存一个响应</p>
+<p>​    like:HTTP/1.1 304 Not Modified</p>
+<p>​    Date：Sat， 14 Jul 2007 15:39:29</p>
+<p>​    Server:Apache/1.3.0(Unix)</p>
+<p>​    (body为空)</p>
+<p>​    4.2不吻合，说明数据改动。服务器返回给缓存响应，body需要携带最新的数据</p>
+<h1 id="FTP协议-文件传输（略）"><a href="#FTP协议-文件传输（略）" class="headerlink" title="FTP协议-文件传输（略）"></a>FTP协议-文件传输（略）</h1><h1 id="SMTP协议-电子邮件（略）"><a href="#SMTP协议-电子邮件（略）" class="headerlink" title="SMTP协议-电子邮件（略）"></a>SMTP协议-电子邮件（略）</h1><h1 id="DNS协议-目录服务"><a href="#DNS协议-目录服务" class="headerlink" title="DNS协议-目录服务"></a>DNS协议-目录服务</h1><p>DNS，Domain Name System域名系统,，域名与IP地址互相映射的关系型数据库</p>
+<p>应用层协议，将主机名（域名）转换为对应的IP地址</p>
+<p>1、使用C/S架构在通信的端系统间运行</p>
+<p>2、使用UDP传送DNS报文</p>
+<p>3、查找顺序：本地hosts文件→本地DNS解析器缓存→本地DNS服务器→根DNS</p>
+<h2 id="DNS解析过程"><a href="#DNS解析过程" class="headerlink" title="DNS解析过程"></a>DNS解析过程</h2><p>1、用户主机上运行着DNS的客户端，就是我们的PC机或者手机客户端运行着DNS客户端了</p>
+<p>2、浏览器将域名传送到DNS应用的的客户端</p>
+<p>3、DNS客户端向DNS服务端发送一份查询报文，报文包含要访问的主机名字段（中间包括一些列缓存查询以及分布式DNS集群的工作）</p>
+<p>4、DNS服务端向DNS客户端返回报文，报文中含有主机名对应的IP地址</p>
+<p>5、浏览器收到返回的IP地址，向IP地址定位的HTTP服务器发起TCP连接</p>
+<p>DNS污染：顺走你的信息或者给你塞一张网页广告弹窗传单</p>
+<p>DNS劫持：把你指向另一个地方</p>
+<h1 id="P2P应用-文件分发，分布式搜索，IP电话（略）"><a href="#P2P应用-文件分发，分布式搜索，IP电话（略）" class="headerlink" title="P2P应用-文件分发，分布式搜索，IP电话（略）"></a>P2P应用-文件分发，分布式搜索，IP电话（略）</h1><h1 id="SSL-TLS协议"><a href="#SSL-TLS协议" class="headerlink" title="SSL/TLS协议"></a>SSL/TLS协议</h1><h2 id="非对称加密"><a href="#非对称加密" class="headerlink" title="非对称加密"></a>非对称加密</h2><p>非对称加密（RSA）拥有公钥和私钥，发送方使用公钥加密，接收方使用私钥解密。安全，但花费时间长，适合对少部分数据加密</p>
+<h2 id="对称加密"><a href="#对称加密" class="headerlink" title="对称加密"></a>对称加密</h2><p>使用同一个密钥进行加密和解密，常用算法有DES、AES和IDEA等；</p>
+<p>密钥长度由算法设计决定，AES的密钥长度是128/192/256位；</p>
+<p>使用对称加密算法需要指定算法名称、工作模式和填充模式。</p>
+<p>常用加密：</p>
+<p>算法AES</p>
+<p>工作模式ECB/CBC/PCBC/CTR/..</p>
+<p>填充模式NoPadding/PKCS5Padding/PKCS7Padding/…</p>
+<h2 id="https用到了什么加密，有几次加密"><a href="#https用到了什么加密，有几次加密" class="headerlink" title="https用到了什么加密，有几次加密"></a>https用到了什么加密，有几次加密</h2><p>两次加密：</p>
+<p>1、先通过非对称加密RSA交换AES口令</p>
+<p>2、再通过对称加密AES通信</p>
+<p>我们在浏览器中常用的HTTPS协议的做法，即浏览器和服务器先通过RSA交换AES口令，接下来双方通信实际上采用的是速度较快的AES对称加密，而不是缓慢的RSA非对称加密。</p>
 
                 
             </div>
@@ -584,7 +665,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://chunxia-zzz.github.io/2022/05/31/hello-world/">https://chunxia-zzz.github.io/2022/05/31/hello-world/</a>
+                    <a href="https://chunxia-zzz.github.io/2022/06/01/%E5%BA%94%E7%94%A8%E5%B1%82%E5%8D%8F%E8%AE%AE/">https://chunxia-zzz.github.io/2022/06/01/%E5%BA%94%E7%94%A8%E5%B1%82%E5%8D%8F%E8%AE%AE/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -793,13 +874,13 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2022/06/01/%E5%BA%94%E7%94%A8%E5%B1%82%E5%8D%8F%E8%AE%AE/">
+                <a href="/2022/06/01/%E5%85%B3%E4%BA%8E%E6%88%91/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="应用层协议">
+                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="关于我">
                         
-                        <span class="card-title">应用层协议</span>
+                        <span class="card-title">关于我</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -827,7 +908,7 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
                 <a href="/2022/05/31/hello-world/">
@@ -857,7 +938,6 @@
                         </span>
                     </div>
                 </div>
-
                 
             </div>
         </div>
