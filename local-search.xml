@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  
+  
+  
+  <entry>
+    <title>应用层协议</title>
+    <link href="/2022/06/01/%E5%BA%94%E7%94%A8%E5%B1%82%E5%8D%8F%E8%AE%AE/"/>
+    <url>/2022/06/01/%E5%BA%94%E7%94%A8%E5%B1%82%E5%8D%8F%E8%AE%AE/</url>
+    
+    <content type="html"><![CDATA[<p>应用层协议</p><ul><li><p>跨域产生的原因？如何解决？</p></li><li><p>谈下你对 <code>**HTTP**</code> 长连接和短连接的理解？分别应用于哪些场景？</p></li></ul><h1 id="HTTP协议-Web应用"><a href="#HTTP协议-Web应用" class="headerlink" title="HTTP协议-Web应用"></a>HTTP协议-Web应用</h1><h2 id="协议版本1-0-1-1-2-0"><a href="#协议版本1-0-1-1-2-0" class="headerlink" title="协议版本1.0&#x2F;1.1&#x2F;2.0"></a>协议版本1.0&#x2F;1.1&#x2F;2.0</h2><p>http1.0，短连接&#x2F;连接无法复用，连接无法复用会导致每次请求都经历三次握手和慢启动。三次握手在高延迟的场景下影响较明显，慢启动则对文件类大请求影响较大。</p><p>http1.1**（当前广泛使用）** ，支持持久连接，支持并行请求（不等待上一个请求完成）</p><p>http2.0，多路复用，二进制分帧</p><h2 id="报文格式"><a href="#报文格式" class="headerlink" title="报文格式"></a>报文格式</h2><p>请求报文</p><p><img src="https://j5ijmcehlj.feishu.cn/space/api/box/stream/download/asynccode/?code=ZTI3YWYxOTM4YmE4ZTZjNjFhZTVjMzU0M2ZjZDVmZjlfVnF0TVlYcGthQXZCTUdHMTZld1BEV0F4blFlTk95Wk9fVG9rZW46Ym94Y25JUWVDT05hSlpQTmFZQzJIRG5OeG9nXzE2NTQwNzE2NTE6MTY1NDA3NTI1MV9WNA" alt="img"></p><p>第一行为请求行：方法字段，URL字段和HTTP协议版本字段</p><p>后面为首部行（请求头）：</p><p>Host:<a href="http://www.someschool.edu,主机/%E5%9F%9F%E5%90%8D">www.someschool.edu，主机/域名</a></p><p>connection:close,不要使用持久连接</p><p>user-agent:Mozilla&#x2F;4.0,浏览器类型（netscape浏览器）</p><p>accept-language:fr,用户想得到法语（french）版本的响应</p><p><img src="https://j5ijmcehlj.feishu.cn/space/api/box/stream/download/asynccode/?code=NTBmYTU2YzY0YjE5N2MzYWY3ZWI3N2Y5MTNiODg5MjlfN21hWXlPZHRRb1B4M3AyY1BJdUk0b05NTEl2QzNQWVhfVG9rZW46Ym94Y25IUjBjSGZIc0hSZ0tnczJzNENSak9oXzE2NTQwNzE2NTE6MTY1NDA3NTI1MV9WNA" alt="img"></p><p>响应报文</p><p><img src="https://j5ijmcehlj.feishu.cn/space/api/box/stream/download/asynccode/?code=MjdhYTRkZTNjNzVjZjY0YmY0N2I1OTRjMTEwZjAwYWJfTTFKZ1VPWUxUZThtMm40SmdOS1BUYlVod3RUV2pJTnpfVG9rZW46Ym94Y24zeE92VnVLMGdYNnptWXhwSmw1MlpjXzE2NTQwNzE2NTE6MTY1NDA3NTI1MV9WNA" alt="img"></p><p>初始状态行：</p><p>HTTP&#x2F;1.1 200 OK</p><p>首部行（响应头）：</p><p>Connection:close</p><p>Date:Thu,03 Jul 2003 12:00:15 GMT</p><p>Server:Apache&#x2F;1.3.0(Unix)</p><p>Last-Modified:Sun, 6 May 2007 09:23:24 GMT 对象最后修改的日期和时间</p><p>Content-Length:6821 被发送对象的字节数</p><p>Content-Type:text&#x2F;html 发送的是HTML文本</p><p>报文主体（具体的返回数据）：</p><p>(data data data…)</p><p><img src="https://j5ijmcehlj.feishu.cn/space/api/box/stream/download/asynccode/?code=MWU3MWIxZjEzZjE1NGZjZmZiMTcyYmVlNmUzMWRmMjRfcXZRVWd4SFNGZlRtbUdxYlVLUW9MbnJhdm9NajNqdnVfVG9rZW46Ym94Y24zMGo0NlFrMkFkR0RxWWg0QmlWMGVoXzE2NTQwNzE2NTE6MTY1NDA3NTI1MV9WNA" alt="img"></p><h2 id=""><a href="#" class="headerlink" title=""></a></h2><h2 id="cookie"><a href="#cookie" class="headerlink" title="cookie"></a>cookie</h2><p><img src="https://j5ijmcehlj.feishu.cn/space/api/box/stream/download/asynccode/?code=NmQ0MDliODc4NTE1YjgzOTg2ZTQzZDE2MGE2MmQyODdfQzlUM1FsQnFMeFlQWWVockpDem1HWGdhZW9oNmhHSHdfVG9rZW46Ym94Y25sV1RZakpqektnMVlEdU5TaVZYVDlkXzE2NTQwNzE2NTE6MTY1NDA3NTI1MV9WNA" alt="img"></p><p>http，无状态协议</p><p>相同的TCP连接发送请求→持久连接（默认）</p><p>每个请求&#x2F;响应对经一个单独的TCP连接发送→非持久连接</p><p>设计要点，以及他发挥什么作用：</p><p>(1) cookie是以小的文本文件形式（即纯文本），完全存在于用户本地客户端；cookie保存了<strong>登录的凭证</strong> ，有了它，只需要在下次请求时带着cookie发送，就不必再重新输入用户名、密码等重新登录了。</p><p>(2) 是设计用来在<strong>服务端</strong> 和<strong>客户端</strong> 进行<strong>信息传递</strong> 的；</p><p>信息如何进行传递</p><p>1、响应报文中有cookie首部行</p><p>2、请求报文中有cookie首部行</p><p>3、用户端系统中保存一个cookie文件，浏览器管理</p><p>4、有一个后端数据库</p><p>生效过程：</p><p>1、首次访问，服务端产生一个唯一识别码（session_id），数据库添加一个表项</p><p>2、服务端返回响应并携带set-cookie首部行，即返回session_id</p><p>like:Set-cookie:1678</p><p>3、浏览器存储这个cookie键值对</p><p>4、浏览器再次访问服务端时，请求首部行中携带cookie：1678</p><p>5、服务端知道了，这是susan</p><h3 id="session"><a href="#session" class="headerlink" title="session"></a>session</h3><p>服务端维护用户会话，称之为一个session。</p><p>session的生命周期：</p><p>1、只要用户继续访问，服务器就会更新session的最后访问时间，并且维护这个session。</p><p>2、session占用内存，为了防止内存溢出，服务器会把长时间没有活跃的Session删除。这个时间就是session的超时时间。</p><h2 id="缓存"><a href="#缓存" class="headerlink" title="缓存"></a>缓存</h2><p>web缓存（web cache）</p><p>也叫代理服务器，存放缓存。可以将用户浏览器的请求首先定向到web缓存器</p><p>保持缓存数据是实时和真实数据库数据同步的：条件get</p><p>缓存运作方式：</p><p>1、客户端首次发送请求，缓存服务向真实服务请求。真实服务返回数据，缓存服务保存数据，并将数据发送给客户端</p><p>2、客户端再次发送请求，缓存服务器向真实服务器请求，并携带条件get</p><p>like：If-modified-since:wed, 4 Jul 2007 09:23:24</p><p>3、真实服务器比对条件get与服务器最后修改时间是否吻合</p><p>​ 4.1吻合，说明数据未变动。服务器返回给缓存一个响应</p><p>​ like:HTTP&#x2F;1.1 304 Not Modified</p><p>​ Date：Sat， 14 Jul 2007 15:39:29</p><p>​ Server:Apache&#x2F;1.3.0(Unix)</p><p>​ (body为空)</p><p>​ 4.2不吻合，说明数据改动。服务器返回给缓存响应，body需要携带最新的数据</p><h1 id="FTP协议-文件传输（略）"><a href="#FTP协议-文件传输（略）" class="headerlink" title="FTP协议-文件传输（略）"></a>FTP协议-文件传输（略）</h1><h1 id="SMTP协议-电子邮件（略）"><a href="#SMTP协议-电子邮件（略）" class="headerlink" title="SMTP协议-电子邮件（略）"></a>SMTP协议-电子邮件（略）</h1><h1 id="DNS协议-目录服务"><a href="#DNS协议-目录服务" class="headerlink" title="DNS协议-目录服务"></a>DNS协议-目录服务</h1><p>DNS，Domain Name System域名系统,，域名与IP地址互相映射的关系型数据库</p><p>应用层协议，将主机名（域名）转换为对应的IP地址</p><p>1、使用C&#x2F;S架构在通信的端系统间运行</p><p>2、使用UDP传送DNS报文</p><p>3、查找顺序：本地hosts文件→本地DNS解析器缓存→本地DNS服务器→根DNS</p><h2 id="DNS解析过程"><a href="#DNS解析过程" class="headerlink" title="DNS解析过程"></a>DNS解析过程</h2><p>1、用户主机上运行着DNS的客户端，就是我们的PC机或者手机客户端运行着DNS客户端了</p><p>2、浏览器将域名传送到DNS应用的的客户端</p><p>3、DNS客户端向DNS服务端发送一份查询报文，报文包含要访问的主机名字段（中间包括一些列缓存查询以及分布式DNS集群的工作）</p><p>4、DNS服务端向DNS客户端返回报文，报文中含有主机名对应的IP地址</p><p>5、浏览器收到返回的IP地址，向IP地址定位的HTTP服务器发起TCP连接</p><p>DNS污染：顺走你的信息或者给你塞一张网页广告弹窗传单</p><p>DNS劫持：把你指向另一个地方</p><h1 id="P2P应用-文件分发，分布式搜索，IP电话（略）"><a href="#P2P应用-文件分发，分布式搜索，IP电话（略）" class="headerlink" title="P2P应用-文件分发，分布式搜索，IP电话（略）"></a>P2P应用-文件分发，分布式搜索，IP电话（略）</h1><h1 id="SSL-TLS协议"><a href="#SSL-TLS协议" class="headerlink" title="SSL&#x2F;TLS协议"></a>SSL&#x2F;TLS协议</h1><h2 id="非对称加密"><a href="#非对称加密" class="headerlink" title="非对称加密"></a>非对称加密</h2><p>非对称加密（RSA）拥有公钥和私钥，发送方使用公钥加密，接收方使用私钥解密。安全，但花费时间长，适合对少部分数据加密</p><h2 id="对称加密"><a href="#对称加密" class="headerlink" title="对称加密"></a>对称加密</h2><p>使用同一个密钥进行加密和解密，常用算法有DES、AES和IDEA等；</p><p>密钥长度由算法设计决定，AES的密钥长度是128&#x2F;192&#x2F;256位；</p><p>使用对称加密算法需要指定算法名称、工作模式和填充模式。</p><p>常用加密：</p><p>算法AES</p><p>工作模式ECB&#x2F;CBC&#x2F;PCBC&#x2F;CTR&#x2F;..</p><p>填充模式NoPadding&#x2F;PKCS5Padding&#x2F;PKCS7Padding&#x2F;…</p><h2 id="https用到了什么加密，有几次加密"><a href="#https用到了什么加密，有几次加密" class="headerlink" title="https用到了什么加密，有几次加密"></a>https用到了什么加密，有几次加密</h2><p>两次加密：</p><p>1、先通过非对称加密RSA交换AES口令</p><p>2、再通过对称加密AES通信</p><p>我们在浏览器中常用的HTTPS协议的做法，即浏览器和服务器先通过RSA交换AES口令，接下来双方通信实际上采用的是速度较快的AES对称加密，而不是缓慢的RSA非对称加密。</p><hr><p><em>文章作者:</em> <a href="/about">Chun xia</a></p><p><em>文章链接:</em> <a href="https://chunxia-zzz.github.io/2022/06/01/%E5%BA%94%E7%94%A8%E5%B1%82%E5%8D%8F%E8%AE%AE/">https://chunxia-zzz.github.io/2022/06/01/%E5%BA%94%E7%94%A8%E5%B1%82%E5%8D%8F%E8%AE%AE/</a></p><p><em>版权声明:</em> 本博客所有文章除特別声明外，均采用 <a href="https://creativecommons.org/licenses/by/4.0/deed.zh">CC BY 4.0</a> 许可协议。转载请注明来源 <a href="/about">Chun xia</a> ! </p><p>无标签</p><p>赏</p><p>__</p><h4 id="你的赏识是我前进的动力"><a href="#你的赏识是我前进的动力" class="headerlink" title="你的赏识是我前进的动力"></a>你的赏识是我前进的动力</h4><ul><li>支付宝</li><li>微 信</li></ul><p><img src="/medias/reward/alipay.jpg" alt="支付宝打赏二维码"></p><p><img src="/medias/reward/wechat.png" alt="微信打赏二维码"></p><p>__  上一篇</p><p><a href="/2022/06/01/%E5%85%B3%E4%BA%8E%E6%88%91/"> <img src="/medias/featureimages/6.jpg" alt="关于我"> 关于我 </a></p><p>__2022-06-01 __Chun xia</p><p>下一篇 __</p><p><a href="/2022/05/31/hello-world/"> <img src="/medias/featureimages/12.jpg" alt="Hello World"> Hello World </a></p><p>__2022-05-31 __Chun xia</p><p>__   目录</p><p>__</p><p>Copyright (C) 2019-2022 2019 <a href="/about">Chun xia</a> | Powered by <a href="https://hexo.io/">Hexo</a> | Theme <a href="https://github.com/blinkfox/hexo-theme-matery">Matery</a><br>| __  总访问量:  次  | __  总访问人数:  人    </p><p><a href="https://github.com/blinkfox"> __</a> <a href="mailto:&#x31;&#49;&#56;&#x31;&#x30;&#x36;&#50;&#x38;&#x37;&#x33;&#x40;&#x71;&#113;&#x2e;&#x63;&#x6f;&#109;"> __</a> <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1181062873"> __</a> <a href="/atom.xml"> __</a></p><p>__   搜索</p><p>__</p><p>&lt;</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>计算机网络</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>计算机网络</tag>
+      
+      <tag>HTTP</tag>
+      
+      <tag>DNS</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>关于我</title>
+    <link href="/2022/06/01/%E5%85%B3%E4%BA%8E%E6%88%91/"/>
+    <url>/2022/06/01/%E5%85%B3%E4%BA%8E%E6%88%91/</url>
+    
+    <content type="html"><![CDATA[<p>我是春夏，一个很普通的测试&#x2F;测试开发工程师</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>关于</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>关于</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>运输层协议</title>
+    <link href="/2022/06/01/%E8%BF%90%E8%BE%93%E5%B1%82%E5%8D%8F%E8%AE%AE/"/>
+    <url>/2022/06/01/%E8%BF%90%E8%BE%93%E5%B1%82%E5%8D%8F%E8%AE%AE/</url>
+    
+    <content type="html"><![CDATA[<p>运输层协议</p><h1 id="综述"><a href="#综述" class="headerlink" title="综述"></a>综述</h1><p>运输层协议服务：</p><p>可靠数据传输：保证报文不丢失，TCP提供</p><p>吞吐量：交付bit的速率，越大越好 第七章</p><p>定时:保证较低的时延 第七章</p><p>安全性：发送接收数据加密，数据完整性和端点鉴别，使用TCP+SSL实现，第八章</p><h2 id="一图看懂TCP和UDP区别"><a href="#一图看懂TCP和UDP区别" class="headerlink" title="一图看懂TCP和UDP区别"></a>一图看懂TCP和UDP区别</h2><p><img src="https://j5ijmcehlj.feishu.cn/space/api/box/stream/download/asynccode/?code=MWQwY2M0MGI5ZDFkM2UxNTYxNzM5NTg5YmQyNjBhMTJfbU81YUp5TklLbmpwSG1RUkJwYW9oRFlPeGo0amg2emNfVG9rZW46Ym94Y25QY2hxT1lsV1BvTk1ubGhETWhCc3FmXzE2NTQwNzE3NDY6MTY1NDA3NTM0Nl9WNA" alt="img"></p><h1 id="TCP"><a href="#TCP" class="headerlink" title="TCP"></a>TCP</h1><p>面向连接服务</p><p>可靠数据传输服务：正确，按序</p><h2 id="三次握手→建立连接"><a href="#三次握手→建立连接" class="headerlink" title="三次握手→建立连接"></a>三次握手→建立连接</h2><p>1、C，我想要建立连接</p><p>2、收到，我是S，已确认你的身份（C），可以建立连接</p><p>3、好的，已收到你的回信，确认你是S，开始通信</p><p>A对B说：我是A （发起通信）</p><p>B对A说：我是B，我收到你发送的通信邀请 （让A确认接收者的确是B）</p><p>A对B说：收到，我知道你是B，开始通信 （让B知道，A收到了来自B的回信，确认B的身份，开始通信）</p><p>一个RTT等于前两次握手的时间，第三次握手客户机将确认信息和</p><p>http请求报文结合起来发送到到该tcp连接</p><p>一个接口的响应时间&#x3D;两个RTT+服务器传输HTML的时间。一个RTT用于建立TCP，另一个RTT用于请求和接收一个对象</p><h2 id="四次挥手→断开连接"><a href="#四次挥手→断开连接" class="headerlink" title="四次挥手→断开连接"></a>四次挥手→断开连接</h2><p>无差错，适当顺序。保证没有字节的丢失和冗余</p><p>客户端对服务端：我想要断开连接</p><p>服务端对客户端：收到信息，但得等我数据返回完</p><p>服务端对客户端：数据已返回完，可以关闭连接</p><p>客户端对服务端：收到信息，请关闭连接</p><h2 id="TCP首部字段及含义"><a href="#TCP首部字段及含义" class="headerlink" title="TCP首部字段及含义"></a>TCP首部字段及含义</h2><h2 id="TCP流量控制-滑动窗口（与拥塞控制两个概念）"><a href="#TCP流量控制-滑动窗口（与拥塞控制两个概念）" class="headerlink" title="TCP流量控制&#x2F;滑动窗口（与拥塞控制两个概念）"></a>TCP流量控制&#x2F;滑动窗口（与拥塞控制两个概念）</h2><p>cwnd（congestion window）</p><p>发送方维护一个接收窗口的变量来提供流量控制。功能是告诉发送方，接收方还有多少缓存空间。</p><p>已发送-已接收&lt;&#x3D;接收窗口</p><p>当网络拥塞时，滑动窗口变小，网络畅通时，滑动窗口变大</p><h2 id="TCP拥塞控制（Reno算法）"><a href="#TCP拥塞控制（Reno算法）" class="headerlink" title="TCP拥塞控制（Reno算法）"></a>TCP拥塞控制（Reno算法）</h2><p>调节网络流量速率，拥塞时限制TCP发送方</p><p>1、加性增、乘性减</p><p>2、慢启动</p><p>3、对超时事件作出反应</p><p><img src="https://j5ijmcehlj.feishu.cn/space/api/box/stream/download/asynccode/?code=YmI4Y2U4NTNkOTdhNzI5Zjg2MzM4ZWJmOTBiMjI2OThfejdUUU53TlpCc1JOQkc4ZVd0cEpGa1dNYTRqZ3d6aVRfVG9rZW46Ym94Y25QY3RGRHlqeFAyQklDTVdnWTNtS1VlXzE2NTQwNzE3NDY6MTY1NDA3NTM0Nl9WNA" alt="img"></p><h3 id="慢启动"><a href="#慢启动" class="headerlink" title="慢启动"></a>慢启动</h3><p>慢启动阶段思路是不要一开始就发送大量的数据，先探测一下网络的拥塞程度，也就是说由小到大逐渐增加拥塞窗口的大小，在没有出现丢包时每收到一个 ACK 就将拥塞窗口大小加一（单位是 MSS，最大单个报文段长度），每轮次发送窗口增加一倍，呈指数增长，若出现丢包，则将拥塞窗口减半，进入拥塞避免阶段</p><h3 id="拥塞避免"><a href="#拥塞避免" class="headerlink" title="拥塞避免"></a>拥塞避免</h3><p>当窗口达到慢启动阈值或出现丢包时，进入拥塞避免阶段，窗口每轮次加一，呈线性增长；当收到对一个报文的三个重复的 ACK 时，认为这个报文的下一个报文丢失了，进入快重传阶段</p><h3 id="快重传"><a href="#快重传" class="headerlink" title="快重传"></a>快重传</h3><p>要求接收方在收到一个失序的报文段后就立即发出重复确认（为的是使发送方及早知道有报文段没有到达对方，可提高网络吞吐量约20%）而不要等到自己发送数据时捎带确认；</p><h3 id="快恢复"><a href="#快恢复" class="headerlink" title="快恢复"></a>快恢复</h3><p>快重传完成后进入快恢复阶段，将慢启动阈值修改为当前拥塞窗口值的一半，同时拥塞窗口值等于慢启动阈值，然后进入拥塞避免阶段，重复上述过程。</p><h1 id="UDP"><a href="#UDP" class="headerlink" title="UDP"></a>UDP</h1><p>UDP：不可靠的，无连接（没有握手）的服务，无连接状态，开销小容忍丢失，多媒体音&#x2F;视频+因特网电话电话</p><p>无连接，不可靠，可能乱序</p><h2 id="UDP报文段结构"><a href="#UDP报文段结构" class="headerlink" title="UDP报文段结构"></a>UDP报文段结构</h2><p>首部：源端口号，目的端口号，长度，校验和。每个字段两字节。</p><p>校验和提供差错检测功能：</p><hr><p><em>文章作者:</em> <a href="/about">Chun xia</a></p><p><em>文章链接:</em> <a href="https://chunxia-zzz.github.io/2022/06/01/%E8%BF%90%E8%BE%93%E5%B1%82%E5%8D%8F%E8%AE%AE/">https://chunxia-zzz.github.io/2022/06/01/%E8%BF%90%E8%BE%93%E5%B1%82%E5%8D%8F%E8%AE%AE/</a></p><p><em>版权声明:</em> 本博客所有文章除特別声明外，均采用 <a href="https://creativecommons.org/licenses/by/4.0/deed.zh">CC BY 4.0</a> 许可协议。转载请注明来源 <a href="/about">Chun xia</a> ! </p><p>无标签</p><p>赏</p><p>__</p><h4 id="你的赏识是我前进的动力"><a href="#你的赏识是我前进的动力" class="headerlink" title="你的赏识是我前进的动力"></a>你的赏识是我前进的动力</h4><ul><li>支付宝</li><li>微 信</li></ul><p><img src="/medias/reward/alipay.jpg" alt="支付宝打赏二维码"></p><p><img src="/medias/reward/wechat.png" alt="微信打赏二维码"></p><p>__  本篇 </p><p><a href="/2022/06/01/%E8%BF%90%E8%BE%93%E5%B1%82%E5%8D%8F%E8%AE%AE/"> <img src="/medias/featureimages/6.jpg" alt="运输层协议"> 运输层协议 </a></p><p>__2022-06-01 __Chun xia</p><p>下一篇 __</p><p><a href="/2022/06/01/%E5%85%B3%E4%BA%8E%E6%88%91/"> <img src="/medias/featureimages/6.jpg" alt="关于我"> 关于我 </a></p><p>__2022-06-01 __Chun xia</p><p>__   目录</p><p>__</p><p>Copyright (C) 2019-2022 2019 <a href="/about">Chun xia</a> | Powered by <a href="https://hexo.io/">Hexo</a> | Theme <a href="https://github.com/blinkfox/hexo-theme-matery">Matery</a><br>| __  总访问量:  次  | __  总访问人数:  人    </p><p><a href="https://github.com/blinkfox"> __</a> <a href="mailto:&#x31;&#49;&#x38;&#x31;&#48;&#54;&#x32;&#x38;&#55;&#x33;&#x40;&#x71;&#113;&#x2e;&#x63;&#111;&#109;"> __</a> <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1181062873"> __</a> <a href="/atom.xml"> __</a></p><p>__   搜索</p><p>__</p><p>&lt;</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>计算机网络</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>计算机网络</tag>
+      
+      <tag>TCP</tag>
+      
+      <tag>UDP</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="/2022/05/31/hello-world/"/>
+    <url>/2022/05/31/hello-world/</url>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre><code class="hljs">1  </code></pre><p>| </p><pre><code class="hljs">$ hexo new &quot;My New Post&quot;    </code></pre><p>—|—  </p><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre><code class="hljs">1  </code></pre><p>| </p><pre><code class="hljs">$ hexo server    </code></pre><p>—|—  </p><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre><code class="hljs">1  </code></pre><p>| </p><pre><code class="hljs">$ hexo generate    </code></pre><p>—|—  </p><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre><code class="hljs">1  </code></pre><p>| </p><pre><code class="hljs">$ hexo deploy    </code></pre><p>—|—  </p><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p><hr><p><em>文章作者:</em> <a href="/about">Chun xia</a></p><p><em>文章链接:</em> <a href="https://chunxia-zzz.github.io/2022/05/31/hello-world/">https://chunxia-zzz.github.io/2022/05/31/hello-world/</a></p><p><em>版权声明:</em> 本博客所有文章除特別声明外，均采用 <a href="https://creativecommons.org/licenses/by/4.0/deed.zh">CC BY 4.0</a> 许可协议。转载请注明来源 <a href="/about">Chun xia</a> ! </p><p>无标签</p><p>赏</p><p>__</p><h4 id="你的赏识是我前进的动力"><a href="#你的赏识是我前进的动力" class="headerlink" title="你的赏识是我前进的动力"></a>你的赏识是我前进的动力</h4><ul><li>支付宝</li><li>微 信</li></ul><p><img src="/medias/reward/alipay.jpg" alt="支付宝打赏二维码"></p><p><img src="/medias/reward/wechat.png" alt="微信打赏二维码"></p><p>__  上一篇</p><p><a href="/2022/06/01/%E5%BA%94%E7%94%A8%E5%B1%82%E5%8D%8F%E8%AE%AE/"> <img src="/medias/featureimages/13.jpg" alt="应用层协议"> 应用层协议 </a></p><p>__2022-06-01 __Chun xia</p><p>本篇 __</p><p><a href="/2022/05/31/hello-world/"> <img src="/medias/featureimages/12.jpg" alt="Hello World"> Hello World </a></p><p>__2022-05-31 __Chun xia</p><p>__   目录</p><p>__</p><p>Copyright (C) 2019-2022 2019 <a href="/about">Chun xia</a> | Powered by <a href="https://hexo.io/">Hexo</a> | Theme <a href="https://github.com/blinkfox/hexo-theme-matery">Matery</a><br>| __  总访问量:  次  | __  总访问人数:  人    </p><p><a href="https://github.com/blinkfox"> __</a> <a href="mailto:&#x31;&#x31;&#x38;&#x31;&#x30;&#54;&#x32;&#x38;&#x37;&#x33;&#x40;&#x71;&#x71;&#x2e;&#x63;&#x6f;&#109;"> __</a> <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1181062873"> __</a> <a href="/atom.xml"> __</a></p><p>__   搜索</p><p>__</p><p>&lt;</p>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  
+</search>
