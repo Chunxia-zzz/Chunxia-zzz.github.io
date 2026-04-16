@@ -1,0 +1,1533 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/fluid.png">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="Chunxia">
+  <meta name="keywords" content="技术,博客">
+  
+    <meta name="description" content=".ind-root, .ind-root *, .ind-root *::before, .ind-root *::after { box-sizing: border-box; }   .ind-root {     font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, &quot;Microsoft YaHei&quot;, sans-se">
+<meta property="og:type" content="website">
+<meta property="og:title" content="技术指标分析手册">
+<meta property="og:url" content="https://chunxia-zzz.github.io/indicators/index.html">
+<meta property="og:site_name" content="jerry的投资日记">
+<meta property="og:description" content=".ind-root, .ind-root *, .ind-root *::before, .ind-root *::after { box-sizing: border-box; }   .ind-root {     font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, &quot;Microsoft YaHei&quot;, sans-se">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2026-04-15T16:00:00.000Z">
+<meta property="article:modified_time" content="2026-04-16T16:25:03.042Z">
+<meta property="article:author" content="Chunxia">
+<meta property="article:tag" content="技术,博客">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+  
+  <title>技术指标分析手册 - jerry的投资日记</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"chunxia-zzz.github.io","root":"/","version":"1.9.9","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"expand_all":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"openkounter":{"server_url":"https://open-kounter.mintimate.cn","path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 8.1.1"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 60vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>jerry的投资日记</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content (desktop) -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/watchlist/" target="_self">
+                <i class="iconfont icon-chart"></i>
+                <span>标的池</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/buy-checklist/" target="_self">
+                <i class="iconfont icon-check"></i>
+                <span>买入Checklist</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/indicators/" target="_self">
+                <i class="iconfont icon-books"></i>
+                <span>技术指标</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/bear-markets/" target="_self">
+                <i class="iconfont icon-chart-line"></i>
+                <span>熊市对比</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>参考链接</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile grid menu overlay -->
+<div id="mobile-grid-menu" class="d-lg-none">
+  <div class="mobile-grid-menu-inner">
+    <div class="container">
+      <div class="row">
+        
+          
+          
+          
+          
+            <div class="col-4 mobile-grid-cell">
+              <a href="/" target="_self">
+                <div class="mobile-grid-item">
+                  <i class="iconfont icon-home-fill"></i>
+                  <span>首页</span>
+                </div>
+              </a>
+            </div>
+          
+        
+          
+          
+          
+          
+            <div class="col-4 mobile-grid-cell">
+              <a href="/archives/" target="_self">
+                <div class="mobile-grid-item">
+                  <i class="iconfont icon-archive-fill"></i>
+                  <span>归档</span>
+                </div>
+              </a>
+            </div>
+          
+        
+          
+          
+          
+          
+            <div class="col-4 mobile-grid-cell">
+              <a href="/categories/" target="_self">
+                <div class="mobile-grid-item">
+                  <i class="iconfont icon-category-fill"></i>
+                  <span>分类</span>
+                </div>
+              </a>
+            </div>
+          
+        
+          
+          
+          
+          
+            <div class="col-4 mobile-grid-cell">
+              <a href="/tags/" target="_self">
+                <div class="mobile-grid-item">
+                  <i class="iconfont icon-tags-fill"></i>
+                  <span>标签</span>
+                </div>
+              </a>
+            </div>
+          
+        
+          
+          
+          
+          
+            <div class="col-4 mobile-grid-cell">
+              <a href="/watchlist/" target="_self">
+                <div class="mobile-grid-item">
+                  <i class="iconfont icon-chart"></i>
+                  <span>标的池</span>
+                </div>
+              </a>
+            </div>
+          
+        
+          
+          
+          
+          
+            <div class="col-4 mobile-grid-cell">
+              <a href="/buy-checklist/" target="_self">
+                <div class="mobile-grid-item">
+                  <i class="iconfont icon-check"></i>
+                  <span>买入Checklist</span>
+                </div>
+              </a>
+            </div>
+          
+        
+          
+          
+          
+          
+            <div class="col-4 mobile-grid-cell">
+              <a href="/indicators/" target="_self">
+                <div class="mobile-grid-item">
+                  <i class="iconfont icon-books"></i>
+                  <span>技术指标</span>
+                </div>
+              </a>
+            </div>
+          
+        
+          
+          
+          
+          
+            <div class="col-4 mobile-grid-cell">
+              <a href="/bear-markets/" target="_self">
+                <div class="mobile-grid-item">
+                  <i class="iconfont icon-chart-line"></i>
+                  <span>熊市对比</span>
+                </div>
+              </a>
+            </div>
+          
+        
+          
+          
+          
+          
+            <div class="col-4 mobile-grid-cell">
+              <a href="/about/" target="_self">
+                <div class="mobile-grid-item">
+                  <i class="iconfont icon-user-fill"></i>
+                  <span>参考链接</span>
+                </div>
+              </a>
+            </div>
+          
+        
+        
+          <div class="col-4 mobile-grid-cell" id="mobile-search-btn">
+            <a href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <div class="mobile-grid-item">
+                <i class="iconfont icon-search"></i>
+                <span>搜索</span>
+              </div>
+            </a>
+          </div>
+        
+        
+          <div class="col-4 mobile-grid-cell" id="mobile-color-toggle-btn"
+               data-label-light="开灯"
+               data-label-dark="关灯">
+            <a href="javascript:;" aria-label="Color Toggle">
+              <div class="mobile-grid-item">
+                <i class="iconfont icon-dark" id="mobile-color-toggle-icon"></i>
+                <span id="mobile-color-toggle-label">关灯</span>
+              </div>
+            </a>
+          </div>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="技术指标分析手册"></span>
+          
+        </div>
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+
+
+</div>
+
+  </header>
+
+  <main>
+    
+      <div class="container nopadding-x-md">
+        <div id="board"
+          >
+          
+          <div class="container">
+            <div class="row">
+              <div class="col-12 col-md-10 m-auto">
+                
+
+<article class="page-content">
+  
+<style>
+  .ind-root, .ind-root *, .ind-root *::before, .ind-root *::after { box-sizing: border-box; }
+  .ind-root {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft YaHei", sans-serif;
+    background: #0f1923;
+    color: #e0e6ed;
+    padding: 40px 20px;
+    min-height: 100vh;
+    max-width: 1100px;
+    margin: 0 auto;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  .ind-root h1 {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+    background: linear-gradient(135deg, #60a5fa, #a78bfa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .ind-root .subtitle {
+    text-align: center;
+    color: #7a8a9e;
+    font-size: 0.95rem;
+    margin-bottom: 52px;
+    line-height: 1.6;
+  }
+  .ind-root .section { margin-bottom: 72px; }
+  .ind-root .section-anchor { display: block; position: relative; top: -20px; visibility: hidden; }
+
+  /* ---- 指标标题 ---- */
+  .ind-root .ind-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 8px;
+  }
+  .ind-root .ind-number {
+    width: 40px; height: 40px;
+    border-radius: 10px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #fff;
+    flex-shrink: 0;
+  }
+  .ind-root .ind-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+  }
+  .ind-root .ind-subtitle {
+    color: #7a8a9e;
+    font-size: 0.88rem;
+    margin-bottom: 28px;
+    padding-left: 54px;
+  }
+
+  /* 颜色主题 */
+  .ind-root .theme-blue .ind-number   { background: linear-gradient(135deg, #1d4ed8, #3b82f6); }
+  .ind-root .theme-purple .ind-number { background: linear-gradient(135deg, #7e22ce, #a78bfa); }
+  .ind-root .theme-green .ind-number  { background: linear-gradient(135deg, #059669, #34d399); }
+  .ind-root .theme-amber .ind-number  { background: linear-gradient(135deg, #d97706, #fbbf24); }
+  .ind-root .theme-cyan .ind-number   { background: linear-gradient(135deg, #0891b2, #67e8f9); }
+  .ind-root .theme-rose .ind-number   { background: linear-gradient(135deg, #be123c, #fb7185); }
+  .ind-root .theme-orange .ind-number { background: linear-gradient(135deg, #c2410c, #fb923c); }
+
+  /* ---- 内容面板 ---- */
+  .ind-root .panel {
+    background: #182634;
+    border-radius: 12px;
+    padding: 28px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.3);
+  }
+  .ind-root .panel-title {
+    font-size: 0.82rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: .6px;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .ind-root .panel-title::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: #243447;
+  }
+  .ind-root .theme-blue .panel-title   { color: #60a5fa; }
+  .ind-root .theme-purple .panel-title { color: #a78bfa; }
+  .ind-root .theme-green .panel-title  { color: #34d399; }
+  .ind-root .theme-amber .panel-title  { color: #fbbf24; }
+  .ind-root .theme-cyan .panel-title   { color: #67e8f9; }
+  .ind-root .theme-rose .panel-title   { color: #fb7185; }
+  .ind-root .theme-orange .panel-title { color: #fb923c; }
+
+  .ind-root .panel p, .ind-root .panel li {
+    font-size: 0.9rem;
+    color: #94a3b8;
+    line-height: 1.75;
+  }
+  .ind-root .panel p { margin-bottom: 10px; }
+  .ind-root .panel p:last-child { margin-bottom: 0; }
+  .ind-root .panel strong { color: #e0e6ed; }
+  .ind-root .panel ul, .ind-root .panel ol { padding-left: 20px; margin-bottom: 10px; }
+  .ind-root .panel li { margin-bottom: 4px; }
+
+  /* ---- 公式块 ---- */
+  .ind-root .formula {
+    background: #0f1923;
+    border: 1px solid #243447;
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin: 14px 0;
+    font-family: "SF Mono", "Fira Code", "Consolas", monospace;
+    font-size: 0.85rem;
+    color: #67e8f9;
+    line-height: 1.8;
+    overflow-x: auto;
+  }
+  .ind-root .formula .comment { color: #5a7a94; }
+  .ind-root .formula .hl { color: #fbbf24; font-weight: 600; }
+  .ind-root .formula .green { color: #34d399; }
+  .ind-root .formula .red { color: #ff6b6b; }
+
+  /* ---- 信号表格 ---- */
+  .ind-root .sig-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 14px 0;
+  }
+  .ind-root .sig-table th {
+    background: #1e3248;
+    color: #8fabc4;
+    font-weight: 600;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: .4px;
+    padding: 10px 14px;
+    text-align: left;
+  }
+  .ind-root .sig-table td {
+    padding: 10px 14px;
+    border-top: 1px solid #243447;
+    font-size: 0.88rem;
+    color: #94a3b8;
+  }
+  .ind-root .sig-table tr:hover { background: #1b2f42; }
+  .ind-root .bull { color: #34d399; font-weight: 600; }
+  .ind-root .bear { color: #ff6b6b; font-weight: 600; }
+  .ind-root .neutral { color: #fbbf24; font-weight: 600; }
+
+  /* ---- 提示块 ---- */
+  .ind-root .tip {
+    background: #1a2c3d;
+    border-left: 3px solid #3b82f6;
+    border-radius: 0 8px 8px 0;
+    padding: 14px 18px;
+    margin: 14px 0;
+    font-size: 0.85rem;
+    color: #94a3b8;
+    line-height: 1.65;
+  }
+  .ind-root .tip.warn { border-left-color: #f59e0b; }
+  .ind-root .tip.danger { border-left-color: #ef4444; }
+  .ind-root .tip strong { color: #e0e6ed; }
+
+  /* ---- 双栏 ---- */
+  .ind-root .two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  @media (max-width: 768px) { .ind-root .two-col { grid-template-columns: 1fr; } }
+
+  /* ---- 信号卡 ---- */
+  .ind-root .signal-card {
+    background: #1e3248;
+    border-radius: 8px;
+    padding: 16px 18px;
+  }
+  .ind-root .signal-card h4 {
+    font-size: 0.9rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+  .ind-root .signal-card p {
+    font-size: 0.85rem;
+    color: #94a3b8;
+    line-height: 1.6;
+    margin-bottom: 6px;
+  }
+  .ind-root .signal-card p:last-child { margin-bottom: 0; }
+  .ind-root .signal-card.bullish { border-left: 3px solid #34d399; }
+  .ind-root .signal-card.bullish h4 { color: #34d399; }
+  .ind-root .signal-card.bearish { border-left: 3px solid #ff6b6b; }
+  .ind-root .signal-card.bearish h4 { color: #ff6b6b; }
+
+  /* ---- 导航目录 ---- */
+  .ind-root .toc {
+    background: #182634;
+    border-radius: 12px;
+    padding: 24px 28px;
+    margin-bottom: 56px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.3);
+  }
+  .ind-root .toc-title {
+    font-size: 0.82rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: .6px;
+    color: #5a7a94;
+    margin-bottom: 14px;
+  }
+  .ind-root .toc-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 10px;
+  }
+  .ind-root .toc-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 14px;
+    border-radius: 8px;
+    background: #1e3248;
+    text-decoration: none;
+    color: #e0e6ed;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: background .15s;
+  }
+  .ind-root .toc-item:hover { background: #2a4560; }
+  .ind-root .toc-dot {
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+  .ind-root .toc-cat {
+    font-size: 0.72rem;
+    color: #5a7a94;
+    margin-left: auto;
+    white-space: nowrap;
+  }
+
+  /* ---- 页脚 ---- */
+  .ind-root .footer {
+    text-align: center;
+    color: #4a5e72;
+    font-size: 0.78rem;
+    margin-top: 48px;
+    padding-top: 24px;
+    border-top: 1px solid #1e3248;
+  }
+
+  /* ---- 参数表 ---- */
+  .ind-root .param-row {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    padding: 8px 0;
+    border-bottom: 1px solid #243447;
+    font-size: 0.88rem;
+  }
+  .ind-root .param-row:last-child { border-bottom: none; }
+  .ind-root .param-name {
+    font-weight: 700;
+    font-family: monospace;
+    color: #67e8f9;
+    min-width: 80px;
+  }
+  .ind-root .param-desc { color: #94a3b8; }
+
+  /* ---- h2 override for synergy section ---- */
+  .ind-root h2 {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: #e0e6ed;
+  }
+</style>
+
+<div class="ind-root">
+
+    <h1 id="技术指标分析手册">技术指标分析手册</h1>
+    <p class="subtitle">
+        定义 &middot; 计算方法 &middot; 实战判断<br>
+        覆盖动量、趋势、波动率、成交量、情绪五大类核心指标
+    </p>
+
+    <!-- 目录 -->
+    <div class="toc">
+        <div class="toc-title">目录</div>
+        <div class="toc-grid">
+            <a class="toc-item" href="#rsi">
+                <span class="toc-dot" style="background:#3b82f6;"></span>
+                RSI 相对强弱指标
+                <span class="toc-cat">动量</span>
+            </a>
+            <a class="toc-item" href="#macd">
+                <span class="toc-dot" style="background:#a78bfa;"></span>
+                MACD 指数平滑异同
+                <span class="toc-cat">趋势/动量</span>
+            </a>
+            <a class="toc-item" href="#bollinger">
+                <span class="toc-dot" style="background:#34d399;"></span>
+                Bollinger Bands 布林带
+                <span class="toc-cat">波动率</span>
+            </a>
+            <a class="toc-item" href="#ma">
+                <span class="toc-dot" style="background:#fbbf24;"></span>
+                MA 移动平均线
+                <span class="toc-cat">趋势</span>
+            </a>
+            <a class="toc-item" href="#vix">
+                <span class="toc-dot" style="background:#67e8f9;"></span>
+                VIX 恐慌指数
+                <span class="toc-cat">波动率/情绪</span>
+            </a>
+            <a class="toc-item" href="#volume">
+                <span class="toc-dot" style="background:#fb7185;"></span>
+                成交量分析
+                <span class="toc-cat">成交量</span>
+            </a>
+            <a class="toc-item" href="#fg">
+                <span class="toc-dot" style="background:#fb923c;"></span>
+                CNN Fear &amp; Greed
+                <span class="toc-cat">情绪</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- 1. RSI -->
+    <div class="section theme-blue">
+        <span class="section-anchor" id="rsi"></span>
+        <div class="ind-header">
+            <div class="ind-number">1</div>
+            <div class="ind-title">RSI — Relative Strength Index（相对强弱指标）</div>
+        </div>
+        <div class="ind-subtitle">类型：动量指标 &middot; 创始人：J. Welles Wilder（1978）&middot; 常用参数：RSI(14)</div>
+
+        <div class="panel">
+            <div class="panel-title">定义</div>
+            <p>RSI 衡量一段时间内<strong>价格上涨力度与下跌力度的相对比值</strong>，将价格变动的速度和幅度压缩到 <strong>0–100</strong> 区间，用于判断资产是否处于超买或超卖状态。</p>
+            <p>核心思想：如果近期涨幅远大于跌幅 → RSI 趋近 100（过热）；如果跌幅远大于涨幅 → RSI 趋近 0（过冷）。</p>
+        </div>
+
+        <div class="panel">
+            <div class="panel-title">计算方法</div>
+            <p><strong>第 1 步：计算每日涨跌幅</strong></p>
+            <div class="formula">
+变动 = 今日收盘价 - 昨日收盘价
+<span class="green">变动 > 0 → 归入"上涨"</span>
+<span class="red">变动 < 0 → 归入"下跌"（取绝对值）</span>
+            </div>
+
+            <p><strong>第 2 步：分别求平均涨幅和平均跌幅</strong>（以 14 日为例）</p>
+            <div class="formula">
+<span class="comment">// 首次计算（简单平均）</span>
+AG = 过去14天中所有上涨日涨幅之和 / 14
+AL = 过去14天中所有下跌日跌幅之和 / 14
+
+<span class="comment">// 后续计算（Wilder 指数平滑）</span>
+AG = (<span class="hl">前一日AG × 13</span> + 今日上涨幅度) / 14
+AL = (<span class="hl">前一日AL × 13</span> + 今日下跌幅度) / 14
+            </div>
+
+            <p><strong>第 3 步：计算 RS 和 RSI</strong></p>
+            <div class="formula">
+RS  = AG / AL
+<span class="hl">RSI = 100 - (100 / (1 + RS))</span>
+            </div>
+
+            <div class="tip">
+                <strong>直觉理解：</strong>14 天全涨无跌 → RSI = 100；全跌无涨 → RSI = 0；涨跌各半且幅度相当 → RSI ≈ 50。
+            </div>
+        </div>
+
+        <div class="panel">
+            <div class="panel-title">判断方法</div>
+
+            <p><strong>① 超买 / 超卖（基础用法）</strong></p>
+            <table class="sig-table">
+                <thead><tr><th>RSI 区间</th><th>状态</th><th>含义</th></tr></thead>
+                <tbody>
+                    <tr><td><span class="bear">&gt; 70</span></td><td>超买</td><td>上涨动能过热，短期有回调压力</td></tr>
+                    <tr><td>&gt; 80</td><td><span class="bear">强烈超买</span></td><td>极端过热，回调概率很高</td></tr>
+                    <tr><td>30 – 70</td><td><span class="neutral">中性</span></td><td>趋势正常运行区间</td></tr>
+                    <tr><td><span class="bull">&lt; 30</span></td><td>超卖</td><td>下跌动能过度释放，可能反弹</td></tr>
+                    <tr><td>&lt; 20</td><td><span class="bull">强烈超卖</span></td><td>极端超卖，反弹概率很高</td></tr>
+                </tbody>
+            </table>
+
+            <p><strong>② 背离信号（高级用法，更可靠）</strong></p>
+            <div class="two-col">
+                <div class="signal-card bullish">
+                    <h4>看涨背离（底背离）</h4>
+                    <p>价格创新低，但 RSI <strong>没有创新低</strong>（低点抬高）</p>
+                    <p>含义：下跌动能在衰减，卖方力量枯竭，即将反转向上。</p>
+                </div>
+                <div class="signal-card bearish">
+                    <h4>看跌背离（顶背离）</h4>
+                    <p>价格创新高，但 RSI <strong>没有创新高</strong>（高点降低）</p>
+                    <p>含义：上涨动能在衰减，买方力量不足，即将反转向下。</p>
+                </div>
+            </div>
+
+            <p style="margin-top:16px;"><strong>③ 中轴线（50）判断趋势方向</strong></p>
+            <table class="sig-table">
+                <thead><tr><th>条件</th><th>信号</th><th>判断</th></tr></thead>
+                <tbody>
+                    <tr><td>RSI 持续在 50 以上运行</td><td class="bull">多头趋势</td><td>回踩 40–50 区域可视为支撑</td></tr>
+                    <tr><td>RSI 持续在 50 以下运行</td><td class="bear">空头趋势</td><td>反弹至 50–60 区域可视为阻力</td></tr>
+                    <tr><td>RSI 从下方突破 50</td><td class="bull">趋势转多</td><td>空转多信号</td></tr>
+                    <tr><td>RSI 从上方跌破 50</td><td class="bear">趋势转空</td><td>多转空信号</td></tr>
+                </tbody>
+            </table>
+
+            <p style="margin-top:16px;"><strong>④ 不同周期的权重</strong></p>
+            <table class="sig-table">
+                <thead><tr><th>周期</th><th>信号意义</th><th>原因</th></tr></thead>
+                <tbody>
+                    <tr><td><strong>周线 RSI &lt; 30</strong></td><td class="bull">极强买入信号</td><td>出现频率 &lt;5%，噪音少，历史胜率高</td></tr>
+                    <tr><td>日线 RSI &lt; 30</td><td><span class="neutral">参考信号</span></td><td>出现频率高，容易假信号，需配合其他指标</td></tr>
+                    <tr><td><strong>周线 + 日线同时 &lt; 30</strong></td><td class="bull">多周期共振 — 最强信号</td><td>大小周期同时超卖，反弹确定性极高</td></tr>
+                </tbody>
+            </table>
+
+            <div class="tip danger">
+                <strong>常见误区：</strong>"RSI < 30 就买入"是错的。在强下跌趋势中，RSI 可以长时间维持在 20–30 区间，单凭超卖抄底会持续套牢。RSI 应与 MACD 背离、VIX、成交量等多指标共振使用。
+            </div>
+        </div>
+    </div>
+
+    <!-- 2. MACD -->
+    <div class="section theme-purple">
+        <span class="section-anchor" id="macd"></span>
+        <div class="ind-header">
+            <div class="ind-number">2</div>
+            <div class="ind-title">MACD — Moving Average Convergence Divergence（指数平滑异同移动平均线）</div>
+        </div>
+        <div class="ind-subtitle">类型：趋势 + 动量指标 &middot; 创始人：Gerald Appel（1979）&middot; 常用参数：MACD(12, 26, 9)</div>
+
+        <div class="panel">
+            <div class="panel-title">定义</div>
+            <p>MACD 通过<strong>两条不同周期的指数移动平均线（EMA）之间的差值</strong>来揭示价格趋势的方向、强度和转折点。</p>
+            <p>它由三个组件构成：<strong>MACD 线</strong>（快线与慢线之差）、<strong>信号线</strong>（MACD 线的平滑）、<strong>柱状图</strong>（MACD 线与信号线之差）。柱状图是最灵敏的部分，能最早反映动能变化。</p>
+        </div>
+
+        <div class="panel">
+            <div class="panel-title">计算方法</div>
+
+            <p><strong>第 1 步：计算快慢 EMA</strong></p>
+            <div class="formula">
+<span class="comment">// EMA = 指数移动平均，给近期价格更高权重</span>
+<span class="comment">// 乘数 = 2 / (周期 + 1)</span>
+EMA(12) = 12日指数移动平均线 <span class="comment">← 快线，反应更灵敏</span>
+EMA(26) = 26日指数移动平均线 <span class="comment">← 慢线，反应更平缓</span>
+            </div>
+
+            <p><strong>第 2 步：计算 MACD 线（DIF）</strong></p>
+            <div class="formula">
+<span class="hl">MACD线 (DIF) = EMA(12) - EMA(26)</span>
+
+<span class="comment">// DIF > 0：短期均线在长期均线上方 → 多头趋势</span>
+<span class="comment">// DIF < 0：短期均线在长期均线下方 → 空头趋势</span>
+            </div>
+
+            <p><strong>第 3 步：计算信号线（DEA）</strong></p>
+            <div class="formula">
+<span class="hl">信号线 (DEA) = MACD线的 9日 EMA</span>
+<span class="comment">// 对 MACD 线做二次平滑，用于产生交叉信号</span>
+            </div>
+
+            <p><strong>第 4 步：计算柱状图（Histogram）</strong></p>
+            <div class="formula">
+<span class="hl">柱状图 = (MACD线 - 信号线) × 2</span>
+
+<span class="green">柱状图 > 0 且递增 → 上涨动能加速</span>
+<span class="green">柱状图 > 0 且递减 → 上涨动能衰减</span>
+<span class="red">柱状图 < 0 且递减（绝对值增大） → 下跌动能加速</span>
+<span class="red">柱状图 < 0 且递增（绝对值缩小） → 下跌动能衰减</span>
+            </div>
+        </div>
+
+        <div class="panel">
+            <div class="panel-title">判断方法</div>
+
+            <p><strong>① 金叉 / 死叉（基础用法）</strong></p>
+            <div class="two-col">
+                <div class="signal-card bullish">
+                    <h4>金叉 — 看涨</h4>
+                    <p>MACD 线<strong>从下方上穿</strong>信号线</p>
+                    <p>若发生在零轴下方 → 更强的看涨信号（空转多）</p>
+                </div>
+                <div class="signal-card bearish">
+                    <h4>死叉 — 看跌</h4>
+                    <p>MACD 线<strong>从上方下穿</strong>信号线</p>
+                    <p>若发生在零轴上方 → 更强的看跌信号（多转空）</p>
+                </div>
+            </div>
+
+            <p style="margin-top:16px;"><strong>② 零轴判断大趋势</strong></p>
+            <table class="sig-table">
+                <thead><tr><th>条件</th><th>信号</th><th>含义</th></tr></thead>
+                <tbody>
+                    <tr><td>MACD 线在零轴上方</td><td class="bull">多头趋势</td><td>EMA(12) > EMA(26)，短期强于长期</td></tr>
+                    <tr><td>MACD 线在零轴下方</td><td class="bear">空头趋势</td><td>EMA(12) < EMA(26)，短期弱于长期</td></tr>
+                    <tr><td>MACD 线上穿零轴</td><td class="bull">趋势转多</td><td>短期均线上穿长期均线</td></tr>
+                    <tr><td>MACD 线下穿零轴</td><td class="bear">趋势转空</td><td>短期均线下穿长期均线</td></tr>
+                </tbody>
+            </table>
+
+            <p style="margin-top:16px;"><strong>③ 柱状图背离（最有价值的用法）</strong></p>
+            <div class="two-col">
+                <div class="signal-card bullish">
+                    <h4>柱状图看涨背离</h4>
+                    <p>价格创新低，但柱状图<strong>低点抬高</strong>（负柱缩小）</p>
+                    <p>含义：下跌动能衰减，是<strong>领先信号</strong>，通常比价格反转早 1–5 根 K 线。</p>
+                    <p>精确定义：需连续 2 根以上柱线缩小，且低点高于前次低点。</p>
+                </div>
+                <div class="signal-card bearish">
+                    <h4>柱状图看跌背离</h4>
+                    <p>价格创新高，但柱状图<strong>高点降低</strong>（正柱缩小）</p>
+                    <p>含义：上涨动能衰减，预示顶部可能形成。</p>
+                </div>
+            </div>
+
+            <p style="margin-top:16px;"><strong>④ 多周期用法</strong></p>
+            <table class="sig-table">
+                <thead><tr><th>周期</th><th>用途</th><th>说明</th></tr></thead>
+                <tbody>
+                    <tr><td><strong>日线 MACD 柱状图背离</strong></td><td>入场时机</td><td>捕捉短期反转点，定位精确买卖点</td></tr>
+                    <tr><td><strong>周线 MACD 柱状图缩小</strong></td><td>大趋势确认</td><td>大周期卖方动能衰减，与日线背离共振 = 多周期反转前兆</td></tr>
+                </tbody>
+            </table>
+
+            <div class="tip warn">
+                <strong>注意：</strong>MACD 是滞后指标（基于均线），在震荡市中容易产生频繁的假金叉/死叉。柱状图背离是其中最领先的用法，但也需配合 RSI、成交量等确认。
+            </div>
+        </div>
+    </div>
+
+    <!-- 3. Bollinger Bands -->
+    <div class="section theme-green">
+        <span class="section-anchor" id="bollinger"></span>
+        <div class="ind-header">
+            <div class="ind-number">3</div>
+            <div class="ind-title">Bollinger Bands — 布林带</div>
+        </div>
+        <div class="ind-subtitle">类型：波动率指标 &middot; 创始人：John Bollinger（1980s）&middot; 常用参数：(20, 2)</div>
+
+        <div class="panel">
+            <div class="panel-title">定义</div>
+            <p>布林带由<strong>三条线</strong>组成，以移动平均线为中轴，上下各加减一定倍数的标准差，形成一个随波动率自动伸缩的"价格通道"。</p>
+            <p>核心思想：价格大部分时间在通道内运行（约 95%），触及通道边缘意味着价格在统计上处于极端位置。</p>
+        </div>
+
+        <div class="panel">
+            <div class="panel-title">计算方法</div>
+            <div class="formula">
+<span class="comment">// 以 (20, 2) 参数为例</span>
+
+<span class="hl">中轨 = 20日简单移动平均线 SMA(20)</span>
+<span class="hl">上轨 = 中轨 + 2 × 标准差(20日)</span>
+<span class="hl">下轨 = 中轨 - 2 × 标准差(20日)</span>
+
+<span class="comment">// 标准差 σ = √(Σ(收盘价 - 均值)² / N)</span>
+
+<span class="comment">// 通道宽度 = 上轨 - 下轨</span>
+<span class="comment">// 波动率高 → 通道变宽（开口）</span>
+<span class="comment">// 波动率低 → 通道变窄（收口）</span>
+            </div>
+
+            <div class="tip">
+                <strong>统计学含义：</strong>在正态分布假设下，±2σ 覆盖约 95.4% 的数据。意味着价格触及上轨/下轨的概率各约为 2.3%，属于统计上的"极端事件"。
+            </div>
+        </div>
+
+        <div class="panel">
+            <div class="panel-title">判断方法</div>
+
+            <p><strong>① 触轨信号</strong></p>
+            <table class="sig-table">
+                <thead><tr><th>条件</th><th>信号</th><th>含义</th></tr></thead>
+                <tbody>
+                    <tr><td>价格触及或跌破<strong>下轨</strong></td><td class="bull">潜在超卖</td><td>统计上约 2.5% 的 K 线触及下轨，具备均值回归基础</td></tr>
+                    <tr><td>价格触及或突破<strong>上轨</strong></td><td class="bear">潜在超买</td><td>短期过热，可能回归中轨</td></tr>
+                    <tr><td>价格沿上轨持续运行</td><td class="bull">强势上涨</td><td>"走布林带上轨"是强趋势特征，不宜做空</td></tr>
+                    <tr><td>价格沿下轨持续运行</td><td class="bear">强势下跌</td><td>"走布林带下轨"是弱势特征，不宜抄底</td></tr>
+                </tbody>
+            </table>
+
+            <p style="margin-top:16px;"><strong>② 收口与开口（Squeeze）</strong></p>
+            <div class="two-col">
+                <div class="signal-card bullish">
+                    <h4>收口 → 开口（Squeeze 突破）</h4>
+                    <p>通道极度收窄后突然向上开口 → 波动率爆发，大概率开启一波趋势行情。</p>
+                    <p>收口期是<strong>暴风雨前的平静</strong>，方向由突破方向决定。</p>
+                </div>
+                <div class="signal-card bearish">
+                    <h4>开口过大后收窄</h4>
+                    <p>通道极度张开后开始收窄 → 极端行情结束，趋势减速，价格可能回归中轨。</p>
+                </div>
+            </div>
+
+            <p style="margin-top:16px;"><strong>③ 中轨的支撑/阻力作用</strong></p>
+            <table class="sig-table">
+                <thead><tr><th>趋势</th><th>中轨作用</th><th>说明</th></tr></thead>
+                <tbody>
+                    <tr><td>上升趋势中</td><td class="bull">动态支撑</td><td>回踩中轨（SMA20）后反弹，是加仓点</td></tr>
+                    <tr><td>下降趋势中</td><td class="bear">动态阻力</td><td>反弹至中轨附近受阻回落</td></tr>
+                </tbody>
+            </table>
+
+            <div class="tip danger">
+                <strong>常见误区：</strong>"价格触下轨就买入"是危险的。在单边下跌趋势中，价格可以沿下轨持续滑落（"走布林带下轨"）。触轨只是提供均值回归的统计基础，必须配合其他指标（RSI 超卖、MACD 背离、缩量等）确认。
+            </div>
+        </div>
+    </div>
+
+    <!-- 4. MA -->
+    <div class="section theme-amber">
+        <span class="section-anchor" id="ma"></span>
+        <div class="ind-header">
+            <div class="ind-number">4</div>
+            <div class="ind-title">MA — Moving Average（移动平均线）</div>
+        </div>
+        <div class="ind-subtitle">类型：趋势指标 &middot; 最基础的技术分析工具 &middot; 关键参数：MA20 / MA50 / MA200</div>
+
+        <div class="panel">
+            <div class="panel-title">定义</div>
+            <p>移动平均线是将过去 N 个周期的收盘价取平均值，连成一条平滑曲线，用于<strong>过滤价格噪音、识别趋势方向</strong>。</p>
+            <p>周期越长，曲线越平滑，对趋势变化的反应越慢但越可靠；周期越短，越灵敏但噪音越多。</p>
+        </div>
+
+        <div class="panel">
+            <div class="panel-title">计算方法</div>
+
+            <p><strong>SMA（简单移动平均）</strong></p>
+            <div class="formula">
+<span class="hl">SMA(N) = (C₁ + C₂ + ... + Cₙ) / N</span>
+<span class="comment">// C = 收盘价，N = 周期</span>
+<span class="comment">// 所有价格权重相等</span>
+            </div>
+
+            <p><strong>EMA（指数移动平均）</strong></p>
+            <div class="formula">
+乘数 k = 2 / (N + 1)
+<span class="hl">EMA(今日) = 今日收盘价 × k + 昨日EMA × (1 - k)</span>
+<span class="comment">// 近期价格权重更高，反应更灵敏</span>
+
+<span class="comment">// 例：EMA(12) 的乘数 = 2/13 ≈ 0.1538</span>
+<span class="comment">// 例：EMA(26) 的乘数 = 2/27 ≈ 0.0741</span>
+            </div>
+
+            <p><strong>关键均线周期及含义</strong></p>
+            <div class="param-row"><span class="param-name">MA5/MA10</span><span class="param-desc">超短期趋势，适合日内/短线交易者</span></div>
+            <div class="param-row"><span class="param-name">MA20</span><span class="param-desc">≈ 1 个月交易日，短期趋势参考（= 布林带中轨）</span></div>
+            <div class="param-row"><span class="param-name">MA50</span><span class="param-desc">≈ 1 个季度，中期趋势分水岭</span></div>
+            <div class="param-row"><span class="param-name">MA200</span><span class="param-desc">≈ 1 年，<strong>最重要的长期趋势线</strong>，机构和算法交易广泛参考</span></div>
+        </div>
+
+        <div class="panel">
+            <div class="panel-title">判断方法</div>
+
+            <p><strong>① 价格与均线的位置关系</strong></p>
+            <table class="sig-table">
+                <thead><tr><th>条件</th><th>信号</th><th>说明</th></tr></thead>
+                <tbody>
+                    <tr><td>价格在 MA200 上方</td><td class="bull">长期多头趋势</td><td>牛市环境，回调至 MA200 附近是支撑</td></tr>
+                    <tr><td>价格在 MA200 下方</td><td class="bear">长期空头趋势</td><td>熊市环境，反弹至 MA200 附近是阻力</td></tr>
+                    <tr><td>价格偏离 MA200 超过 8%–10%</td><td class="bull">均值回归机会</td><td>过度偏离长期均值，中长期有回归动力</td></tr>
+                </tbody>
+            </table>
+
+            <p style="margin-top:16px;"><strong>② 金叉 / 死叉</strong></p>
+            <div class="two-col">
+                <div class="signal-card bullish">
+                    <h4>金叉（Golden Cross）</h4>
+                    <p>MA50 上穿 MA200</p>
+                    <p>经典长期看涨信号。历史上标普 500 出现金叉后 1 年平均涨幅约 15%。</p>
+                </div>
+                <div class="signal-card bearish">
+                    <h4>死叉（Death Cross）</h4>
+                    <p>MA50 下穿 MA200</p>
+                    <p>长期看跌信号。但有较多假信号（滞后性），需结合量能确认。</p>
+                </div>
+            </div>
+
+            <p style="margin-top:16px;"><strong>③ 均线排列</strong></p>
+            <table class="sig-table">
+                <thead><tr><th>排列</th><th>形态</th><th>含义</th></tr></thead>
+                <tbody>
+                    <tr><td class="bull">多头排列</td><td>MA5 &gt; MA20 &gt; MA50 &gt; MA200，全部向上</td><td>强势上涨趋势，顺势做多</td></tr>
+                    <tr><td class="bear">空头排列</td><td>MA5 &lt; MA20 &lt; MA50 &lt; MA200，全部向下</td><td>强势下跌趋势，不宜抄底</td></tr>
+                    <tr><td class="neutral">缠绕</td><td>多条均线交织在一起</td><td>震荡市/方向不明，等待突破</td></tr>
+                </tbody>
+            </table>
+
+            <div class="tip">
+                <strong>MA200 的特殊地位：</strong>MA200 被称为"牛熊分界线"。华尔街机构、对冲基金、量化策略广泛以 MA200 作为长期趋势判断依据。价格向 MA200 的回归是历史上最稳定的统计规律之一。
+            </div>
+        </div>
+    </div>
+
+    <!-- 5. VIX -->
+    <div class="section theme-cyan">
+        <span class="section-anchor" id="vix"></span>
+        <div class="ind-header">
+            <div class="ind-number">5</div>
+            <div class="ind-title">VIX — CBOE Volatility Index（恐慌指数）</div>
+        </div>
+        <div class="ind-subtitle">类型：波动率 / 情绪指标 &middot; 发布机构：CBOE（芝加哥期权交易所）&middot; 基于标普 500 期权定价</div>
+
+        <div class="panel">
+            <div class="panel-title">定义</div>
+            <p>VIX 衡量市场对<strong>未来 30 天标普 500 波动率的预期</strong>，由标普 500 指数期权的隐含波动率推算而来。</p>
+            <p>它<strong>不是直接测量恐惧</strong>，而是测量市场参与者愿意为"保险"（看跌期权）支付多少溢价。恐慌时期大家抢购保险 → 期权价格飙升 → VIX 飙升。因此被称为"恐慌指数"。</p>
+        </div>
+
+        <div class="panel">
+            <div class="panel-title">计算方法（简化说明）</div>
+            <div class="formula">
+<span class="comment">// VIX 的完整计算非常复杂，涉及期权定价模型</span>
+<span class="comment">// 核心原理如下：</span>
+
+1. 收集标普500指数所有近月和次近月的 <span class="hl">虚值看涨 + 虚值看跌期权</span> 价格
+2. 通过期权价格反推出 <span class="hl">隐含波动率</span>
+3. 加权平均得到 <span class="hl">30天预期年化波动率</span>
+
+<span class="comment">// VIX = 20 的含义：</span>
+<span class="comment">// 市场预期未来30天标普500年化波动率为20%</span>
+<span class="comment">// 换算为月度：20% / √12 ≈ 5.8%，即预期月涨跌幅约 ±5.8%</span>
+            </div>
+        </div>
+
+        <div class="panel">
+            <div class="panel-title">判断方法</div>
+
+            <p><strong>① VIX 绝对水平</strong></p>
+            <table class="sig-table">
+                <thead><tr><th>VIX 区间</th><th>市场状态</th><th>含义</th></tr></thead>
+                <tbody>
+                    <tr><td>&lt; 15</td><td class="bull">低波动 / 平静</td><td>市场自满，可能在酝酿波动（暴风雨前的平静）</td></tr>
+                    <tr><td>15 – 20</td><td class="neutral">正常波动</td><td>市场情绪平稳，趋势健康运行</td></tr>
+                    <tr><td>20 – 30</td><td class="neutral">高波动</td><td>市场焦虑加剧，波动加大</td></tr>
+                    <tr><td class="bull">&gt; 30</td><td>恐慌</td><td>有统计意义的极端恐慌，历史上是<strong>买入信号</strong></td></tr>
+                    <tr><td class="bull">&gt; 40</td><td>极端恐慌</td><td>罕见事件（金融危机、疫情级别），反向买入胜率极高</td></tr>
+                </tbody>
+            </table>
+
+            <p style="margin-top:16px;"><strong>② VIX 的反向指标特性</strong></p>
+            <div class="two-col">
+                <div class="signal-card bullish">
+                    <h4>VIX 飙升 → 看涨（反向）</h4>
+                    <p>VIX 急剧飙升至 30+ 通常对应市场的<strong>恐慌性抛售底部</strong>。</p>
+                    <p>统计数据：VIX 从 &gt;40 回落后，标普 500 未来 12 个月全部为正收益。</p>
+                </div>
+                <div class="signal-card bearish">
+                    <h4>VIX 极低 → 警惕（反向）</h4>
+                    <p>VIX 长时间维持在 &lt;12 表示市场<strong>过度自满</strong>。</p>
+                    <p>历史上极低 VIX 之后往往跟随波动率爆发。</p>
+                </div>
+            </div>
+
+            <p style="margin-top:16px;"><strong>③ VIX 期限结构</strong></p>
+            <table class="sig-table">
+                <thead><tr><th>形态</th><th>含义</th><th>信号</th></tr></thead>
+                <tbody>
+                    <tr><td>正常升水（Contango）</td><td>远月 VIX &gt; 近月 VIX</td><td class="neutral">正常状态，市场对未来不确定性有合理预期</td></tr>
+                    <tr><td>贴水（Backwardation）</td><td>近月 VIX &gt; 远月 VIX</td><td class="bull">短期恐慌极端，但市场预期恐慌将消退 → 底部信号</td></tr>
+                </tbody>
+            </table>
+
+            <div class="tip warn">
+                <strong>注意：</strong>VIX 在持续性熊市中可以长期维持在 25–35 区间（如 2008 年长达数月 &gt;40）。单独看 VIX 绝对值不足以判断底部，需配合 RSI、MACD 背离、成交量等共振确认。VIX &gt; 30 只说明"恐慌已出现"，不说明"恐慌已结束"。
+            </div>
+        </div>
+    </div>
+
+    <!-- 6. Volume -->
+    <div class="section theme-rose">
+        <span class="section-anchor" id="volume"></span>
+        <div class="ind-header">
+            <div class="ind-number">6</div>
+            <div class="ind-title">Volume Analysis — 成交量分析</div>
+        </div>
+        <div class="ind-subtitle">类型：成交量指标 &middot; "量在价先" — 成交量是价格变动的燃料</div>
+
+        <div class="panel">
+            <div class="panel-title">定义</div>
+            <p>成交量是指在特定时间周期内<strong>买卖双方成交的总股数（或合约数）</strong>。它反映市场参与者的活跃程度和交易意愿。</p>
+            <p>核心原则：<strong>"量在价先"</strong>。价格的变动需要成交量的配合才具有可信度。没有量的支撑，价格变动往往不可持续。</p>
+        </div>
+
+        <div class="panel">
+            <div class="panel-title">关键概念</div>
+            <div class="param-row"><span class="param-name">放量</span><span class="param-desc">成交量显著高于近期平均水平（通常 &gt;1.5x 或 &gt;2x 20日均量）</span></div>
+            <div class="param-row"><span class="param-name">缩量</span><span class="param-desc">成交量明显低于近期平均水平</span></div>
+            <div class="param-row"><span class="param-name">天量</span><span class="param-desc">成交量达到阶段性极值，通常出现在趋势末期</span></div>
+            <div class="param-row"><span class="param-name">地量</span><span class="param-desc">成交量萎缩至极低水平，"地量见地价"，但需确认</span></div>
+            <div class="param-row"><span class="param-name">均量线</span><span class="param-desc">成交量的移动平均，常用 5 日均量和 20 日均量作为参照</span></div>
+        </div>
+
+        <div class="panel">
+            <div class="panel-title">判断方法</div>
+
+            <p><strong>① 量价配合（健康趋势）</strong></p>
+            <table class="sig-table">
+                <thead><tr><th>价格</th><th>成交量</th><th>含义</th></tr></thead>
+                <tbody>
+                    <tr><td class="bull">上涨</td><td>放量</td><td class="bull">量价齐升 — 上涨趋势健康，买方积极</td></tr>
+                    <tr><td class="bull">上涨</td><td>缩量</td><td class="neutral">量价背离 — 上涨动能不足，警惕回调</td></tr>
+                    <tr><td class="bear">下跌</td><td>放量</td><td class="bear">恐慌性抛售 — 卖方主导，可能加速下跌</td></tr>
+                    <tr><td class="bear">下跌</td><td>缩量</td><td class="neutral">卖压减轻 — 抛售意愿降低，可能接近底部</td></tr>
+                </tbody>
+            </table>
+
+            <p style="margin-top:16px;"><strong>② 恐慌放量 → 缩量企稳（底部特征）</strong></p>
+            <div class="signal-card bullish" style="margin: 14px 0;">
+                <h4>经典底部形态：投降式抛售 + 缩量企稳</h4>
+                <p><strong>第 1 阶段：恐慌放量（Capitulation）</strong></p>
+                <p>成交量达到阶段性天量，价格大幅下跌。这代表"最后的卖家"在恐慌中不计成本抛售 — 即"投降"。</p>
+                <p><strong>第 2 阶段：缩量企稳</strong></p>
+                <p>随后几日成交量急剧萎缩，但价格不再创新低。这意味着卖方力量衰竭，想卖的人已经卖完了。</p>
+                <p><strong>第 3 阶段：放量上涨确认</strong></p>
+                <p>如果随后出现放量上涨（突破前期阻力），则底部确认。</p>
+            </div>
+
+            <p><strong>③ 天量信号</strong></p>
+            <table class="sig-table">
+                <thead><tr><th>场景</th><th>信号</th><th>含义</th></tr></thead>
+                <tbody>
+                    <tr><td>上涨途中出现天量</td><td class="bear">天量天价</td><td>可能是最后一波疯狂买入，见顶信号</td></tr>
+                    <tr><td>下跌途中出现天量</td><td class="bull">恐慌投降</td><td>卖方能量集中释放，可能是底部区域</td></tr>
+                </tbody>
+            </table>
+
+            <div class="tip">
+                <strong>实用技巧：</strong>单日成交量不看绝对值，而是看<strong>相对值</strong>（与 20 日均量的比值）。放量通常定义为 &gt;1.5 倍均量，天量为 &gt;3 倍均量。
+            </div>
+        </div>
+    </div>
+
+    <!-- 7. CNN Fear & Greed -->
+    <div class="section theme-orange">
+        <span class="section-anchor" id="fg"></span>
+        <div class="ind-header">
+            <div class="ind-number">7</div>
+            <div class="ind-title">CNN Fear &amp; Greed Index（恐惧与贪婪指数）</div>
+        </div>
+        <div class="ind-subtitle">类型：复合情绪指标 &middot; 发布机构：CNN Business &middot; 实时更新</div>
+
+        <div class="panel">
+            <div class="panel-title">定义</div>
+            <p>CNN 恐惧与贪婪指数是一个<strong>综合 7 个市场子指标</strong>的复合情绪指数，将市场情绪量化为 <strong>0–100</strong> 的单一数值。</p>
+            <p>核心逻辑：<strong>"别人恐惧时贪婪，别人贪婪时恐惧"</strong>（巴菲特）。该指数帮助投资者客观量化当前市场的情绪温度。</p>
+        </div>
+
+        <div class="panel">
+            <div class="panel-title">计算方法 — 7 个子指标</div>
+            <p>CNN F&amp;G 指数等权重综合以下 7 个市场信号，每个信号独立判断看涨/看跌/中性：</p>
+
+            <table class="sig-table">
+                <thead><tr><th>#</th><th>子指标</th><th>衡量内容</th></tr></thead>
+                <tbody>
+                    <tr><td>1</td><td><strong>Stock Price Momentum</strong></td><td>标普 500 相对其 125 日均线的位置</td></tr>
+                    <tr><td>2</td><td><strong>Stock Price Strength</strong></td><td>NYSE 创 52 周新高 vs 新低的股票数量</td></tr>
+                    <tr><td>3</td><td><strong>Stock Price Breadth</strong></td><td>McClellan Volume Summation Index（上涨 vs 下跌成交量）</td></tr>
+                    <tr><td>4</td><td><strong>Put/Call Ratio</strong></td><td>看跌期权 vs 看涨期权的成交量比值</td></tr>
+                    <tr><td>5</td><td><strong>Market Volatility (VIX)</strong></td><td>VIX 相对其 50 日均线的位置</td></tr>
+                    <tr><td>6</td><td><strong>Safe Haven Demand</strong></td><td>国债 vs 股票的相对收益率（资金避险偏好）</td></tr>
+                    <tr><td>7</td><td><strong>Junk Bond Demand</strong></td><td>垃圾债与投资级债的利差（信用风险偏好）</td></tr>
+                </tbody>
+            </table>
+
+            <div class="formula">
+<span class="comment">// 每个子指标独立评分为 0–100</span>
+<span class="hl">F&G Index = 7个子指标的等权重平均</span>
+            </div>
+        </div>
+
+        <div class="panel">
+            <div class="panel-title">判断方法</div>
+
+            <p><strong>① 情绪区间</strong></p>
+            <table class="sig-table">
+                <thead><tr><th>数值区间</th><th>情绪状态</th><th>操作参考</th></tr></thead>
+                <tbody>
+                    <tr><td class="bull">0 – 25</td><td><strong>极度恐惧</strong> Extreme Fear</td><td>反向买入信号 — 历史上 &lt;10 后 1 年全部正收益</td></tr>
+                    <tr><td>25 – 45</td><td>恐惧 Fear</td><td>市场偏悲观，开始关注买入机会</td></tr>
+                    <tr><td>45 – 55</td><td><span class="neutral">中性 Neutral</span></td><td>市场情绪平衡</td></tr>
+                    <tr><td>55 – 75</td><td>贪婪 Greed</td><td>市场偏乐观，注意控制仓位</td></tr>
+                    <tr><td class="bear">75 – 100</td><td><strong>极度贪婪</strong> Extreme Greed</td><td>反向卖出信号 — 市场过热，高位风险加大</td></tr>
+                </tbody>
+            </table>
+
+            <p style="margin-top:16px;"><strong>② 极端值的统计意义</strong></p>
+            <div class="two-col">
+                <div class="signal-card bullish">
+                    <h4>F&G &lt; 25（极度恐惧）</h4>
+                    <p>7 个市场信号同时指向恐慌，是<strong>多维度共振的底部信号</strong>。</p>
+                    <p>&lt; 10 为历史极端，出现频率极低（如 2008 金融危机、2020 疫情底部），之后 1 年均为正收益。</p>
+                </div>
+                <div class="signal-card bearish">
+                    <h4>F&G &gt; 80（极度贪婪）</h4>
+                    <p>市场过度乐观，所有人都在买入。</p>
+                    <p>虽然不意味着立即下跌（牛市末期可长期维持高位），但此时追高的风险收益比极差。</p>
+                </div>
+            </div>
+
+            <div class="tip warn">
+                <strong>注意：</strong>F&G 指数是辅助确认工具，不宜单独使用。它的价值在于将 7 个不同维度的市场信号浓缩为单一读数，帮助你快速判断"市场情绪温度"。最佳用法是与技术指标（RSI、MACD）配合使用。
+            </div>
+        </div>
+    </div>
+
+    <!-- 指标协同 -->
+    <div class="section">
+        <h2 style="font-size:1.35rem; margin-bottom:10px;">指标协同：多指标共振体系</h2>
+        <p class="ind-subtitle" style="padding-left:0; margin-bottom:28px;">单一指标都有缺陷，多指标共振才能提高信号可靠性。</p>
+
+        <div class="panel" style="background: linear-gradient(135deg, #182634, #1e3248);">
+            <div class="panel-title" style="color:#60a5fa;">买入信号的理想共振组合</div>
+            <table class="sig-table">
+                <thead><tr><th>层次</th><th>指标</th><th>条件</th><th>作用</th></tr></thead>
+                <tbody>
+                    <tr><td rowspan="3" style="vertical-align:middle;font-weight:700;color:#60a5fa;">动量确认</td><td>周线 RSI</td><td class="bull">&lt; 30</td><td>大周期超卖，信号最强</td></tr>
+                    <tr><td>日线 RSI</td><td class="bull">&lt; 30</td><td>短周期超卖，与周线共振</td></tr>
+                    <tr><td>周线 MACD 柱线</td><td class="bull">缩小（动能衰减）</td><td>大周期卖方力量减弱</td></tr>
+
+                    <tr><td rowspan="3" style="vertical-align:middle;font-weight:700;color:#a78bfa;">价格结构</td><td>日线 MACD 柱线</td><td class="bull">背离（负柱缩小）</td><td>领先信号，精确定位反转点</td></tr>
+                    <tr><td>布林带</td><td class="bull">价格在下轨附近/以下</td><td>统计极端，均值回归基础</td></tr>
+                    <tr><td>MA200 偏离</td><td class="bull">&gt; 8%</td><td>长期均值回归压力</td></tr>
+
+                    <tr><td rowspan="2" style="vertical-align:middle;font-weight:700;color:#fbbf24;">情绪确认</td><td>VIX</td><td class="bull">&gt; 30</td><td>市场恐慌已出现</td></tr>
+                    <tr><td>CNN F&amp;G</td><td class="bull">&lt; 25</td><td>多维度情绪极端</td></tr>
+
+                    <tr><td style="font-weight:700;color:#fb7185;">量能确认</td><td>成交量</td><td class="bull">恐慌放量后缩量企稳</td><td>卖方力量衰竭的直接证据</td></tr>
+                </tbody>
+            </table>
+
+            <div class="tip" style="margin-top:18px; border-left-color:#fbbf24;">
+                <strong>核心原则：</strong>满足的条件越多，买入信号越强。但不需要"全部满足"才行动 — 60 分以上（约 5–6 项满足）即可考虑分批建仓。参考你的<strong>买入策略 Checklist</strong> 页面进行逐项打分。
+            </div>
+        </div>
+
+        <div class="panel" style="margin-top:20px;">
+            <div class="panel-title" style="color:#ff6b6b;">各指标的局限性速查</div>
+            <table class="sig-table">
+                <thead><tr><th>指标</th><th>核心局限</th><th>应对方式</th></tr></thead>
+                <tbody>
+                    <tr><td>RSI</td><td>强趋势中可长期维持超买/超卖</td><td>配合 MACD 背离 + 成交量确认</td></tr>
+                    <tr><td>MACD</td><td>滞后性强，震荡市假信号多</td><td>优先使用柱状图背离（最领先）</td></tr>
+                    <tr><td>布林带</td><td>单边趋势中可沿上/下轨持续运行</td><td>触轨不等于反转，需其他指标确认</td></tr>
+                    <tr><td>MA</td><td>所有均线都是滞后指标</td><td>用于趋势判断而非精确择时</td></tr>
+                    <tr><td>VIX</td><td>可在高位维持数月（持续性熊市）</td><td>VIX 飙升 = 恐慌出现，不等于恐慌结束</td></tr>
+                    <tr><td>成交量</td><td>个股流动性差异大，不同市场不可比</td><td>看相对值（与自身均量比），不看绝对值</td></tr>
+                    <tr><td>F&amp;G</td><td>综合指标，粒度粗，不适合精确择时</td><td>用于"情绪温度"的快速判断，辅助确认</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="footer">
+        技术指标分析手册 &middot; 仅供学习参考，不构成投资建议 &middot; 生成于 2026 年 4 月
+    </div>
+
+</div>
+
+
+
+  
+
+</article>
+
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>
